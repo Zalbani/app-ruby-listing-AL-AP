@@ -26,6 +26,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
+gem 'rails_admin', '~> 1.0'
+
+gem 'route_translator'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
