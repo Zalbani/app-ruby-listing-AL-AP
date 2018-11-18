@@ -28,8 +28,6 @@ gem 'devise'
 
 gem 'rails_admin', '~> 1.0'
 
-gem 'route_translator'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
