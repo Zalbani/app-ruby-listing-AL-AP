@@ -1,24 +1,69 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+School project aiming at the creation of a classified ad site such as for example: https://www.leboncoin.fr/
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Start serveur
 
-* System dependencies
+```
+rails s
+```
 
-* Configuration
+### Some Help
 
-* Database creation
+Modification of the database
 
-* Database initialization
+```
+rails g migration 
 
-* How to run the test suite
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Data loading
+```
+rails db:seed
+```
+### UseFull link
 
-* Deployment instructions
+* [Spec](https://s3.eu-central-1.amazonaws.com/gbarillot-ynov-ruby/files/specs_listings.pdf) - Project specification
 
-* ...
+* [Routing](https://edgeguides.rubyonrails.org/routing.html) - RailsGuides
+* [Devise](https://github.com/plataformatec/devise) - Gem Devise Wiki 
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+
+```
+bundle install
+
+rails db:setup
+
+rails s
+```
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Test lunching
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Authors
+
+* **Alexis Lauradoux** - [AlexisLauradoux](https://github.com/AlexisLauradoux)
+* **Alban Pierson** - [Zalbani](https://github.com/Zalbani)
+
