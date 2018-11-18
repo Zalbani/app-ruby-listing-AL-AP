@@ -7,13 +7,13 @@ RailsAdmin.config do |config|
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
-  config.authorize_with do
-    raise current_user.inspect
-    if current_user.role.name != 'admin'
-      redirect_to '/'
-      end
-  end
+# TO-DO Fix access admin panel
+#  config.authorize_with do
+#    raise current_user.inspect
+#    if current_user.role.name != 'admin'
+#      redirect_to '/'
+#      end
+#  end
   ## == Cancan ==
   # config.authorize_with :cancan
 

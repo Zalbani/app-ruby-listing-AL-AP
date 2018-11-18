@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/projet-listing-ruby-alban-pierson-alexis-lauradoux.iml" filepath="$PROJECT_DIR$/.idea/projet-listing-ruby-alban-pierson-alexis-lauradoux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/listing.iml" filepath="$PROJECT_DIR$/.idea/listing.iml" />
     </modules>
   </component>
 </project>

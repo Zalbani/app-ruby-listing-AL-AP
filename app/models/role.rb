@@ -1,4 +1,5 @@
 class Role < ApplicationRecord
   validates :name,presence:  true
-  has_many :users
+  # TO-DO link users and roles
+  # has_many :users
 end
