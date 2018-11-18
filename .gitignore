@@ -33,4 +33,5 @@
 
 #My ignores
 
-.idea
+.idea/
+.ruby-version
