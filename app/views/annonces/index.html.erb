@@ -1,14 +1,5 @@
 <h1>Coucou nous sommes dans le index.html</h1>
-
-<% if user_signed_in? %>
-  <li class="bouton_log_out">
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li class="bouton_log_in">
-    <%= link_to('Login', new_user_session_path)  %>
-  </li>
-<% end %>
+<%= render partial: 'header' %>
 
 <% @annonces.each do |post| %>
 <a href="<%= annonce_path(post.id) %>">

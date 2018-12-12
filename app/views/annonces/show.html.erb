@@ -1,5 +1,7 @@
 <h1>Coucou nous sommes dans le show.html</h1>
 
+<%= render partial: 'header' %>
+
 <h2>Title : <%= @annonce.title %></h2>
 <i>Content : <%= @annonce.content %></i>
 <p>Ecrit par :<%= @annonce.user.name %></p>
