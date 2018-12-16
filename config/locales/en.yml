@@ -1,17 +1,5 @@
 en:
-  title: "Title"
-  content: "Content"
-  tags: "Tags"
-  image: "Image"
-  category: "Category"
-  hello: "Hello world"
-  homepage:
-    search: "Search"
-  activerecord:
-    errors:
-      models:
-        post:
-          attributes:
-            title:
-              blank: "Title can't be blank"
-
+  test: "Je suis en Anglais"
+  header:
+    logout: "logout"
+    login: "login"

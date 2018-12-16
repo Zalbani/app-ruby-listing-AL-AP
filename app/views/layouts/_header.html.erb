@@ -1,0 +1,33 @@
+<header>
+  <p class="title"> Listing</p>
+  <!-- Login / LogOut option-->
+  <% if user_signed_in? %>
+  <li class="bouton_log_out">
+    <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
+  </li>
+<% else %>
+  <li class="bouton_log_in">
+    <%= link_to(t('header.login'), new_user_session_path)  %>
+  </li>
+<% end %>
+
+  <div class="test">
+    <select data-do="select_language" class="form-control">>
+      <script>
+          var CurrentUrl=self.location.href;
+          var CurrentLang = CurrentUrl.split('\/')[3];
+        if(CurrentLang === "fr"){
+            document.write("<option value=\"fr\" selected>Fr</option>\n" +
+                "<option value=\"en\">En</option>");
+        }
+        else {
+            document.write("<option value=\"fr\">Fr</option>\n" +
+                "<option value=\"en\" selected>En</option>");
+        }
+
+      </script>
+
+    </select>
+  </div>
+
+</header>

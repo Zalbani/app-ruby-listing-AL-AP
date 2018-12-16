@@ -1,14 +1,13 @@
 <h1>Coucou nous sommes dans le index.html</h1>
-<%= render partial: 'header' %>
-
-<% @annonces.each do |post| %>
-<a href="<%= annonce_path(post.id) %>">
+<% @announces.each do |post| %>
+<a href="<%= announce_path(post.id) %>">
   <h2><%= post.title %></h2>
 
   <% if post.picture.attached? %>
     <%= image_tag post.picture, width: '100px' %>
   <% end %>
 </a>
+
 
 
 <% end %>
