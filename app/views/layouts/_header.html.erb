@@ -1,16 +1,15 @@
 <header>
-  <p class="title"> Listing</p>
-  <h1><%= link_to 'Add Class', root_path, class: "btn btn-primary"%></h1>
+  <h4><%= link_to 'Listing', root_path, class: "title"%></h4>
   <!-- Login / LogOut option-->
   <% if user_signed_in? %>
-  <li class="bouton_log_out">
-    <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li class="bouton_log_in">
-    <%= link_to(t('header.login'), new_user_session_path)  %>
-  </li>
-<% end %>
+    <li class="bouton_log_out">
+      <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
+    </li>
+  <% else %>
+    <li class="bouton_log_in">
+      <%= link_to(t('header.login'), new_user_session_path)  %>
+    </li>
+  <% end %>
 
   <div class="test">
     <select data-do="select_language" class="form-control">
@@ -18,6 +17,7 @@
       <option value="en" <%= "selected" if session[:language] == 'en' %>>En</option>
     </select>
   </div>
+  <h4><%= link_to 'Listings', listings_path, class: "btn btn-primary"%></h4>
 
 
 </header>

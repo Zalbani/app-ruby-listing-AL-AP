@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
+
   localized do
     devise_for :users
 
     root to: 'announces#index'
     resources :languages, only: :show
     resources :announces
+
+    get 'listings', action: :index, controller: 'listings'
+
+
+
+
 
 
     namespace :admin do
