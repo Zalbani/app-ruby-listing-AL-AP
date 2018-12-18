@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     devise_for :users
 
     root to: 'announces#index'
+    resources :languages, only: :show
     resources :announces
 
 

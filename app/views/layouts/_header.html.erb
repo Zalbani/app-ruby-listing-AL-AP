@@ -1,5 +1,6 @@
 <header>
   <p class="title"> Listing</p>
+  <h1><%= link_to 'Add Class', root_path, class: "btn btn-primary"%></h1>
   <!-- Login / LogOut option-->
   <% if user_signed_in? %>
   <li class="bouton_log_out">
@@ -12,22 +13,11 @@
 <% end %>
 
   <div class="test">
-    <select data-do="select_language" class="form-control">>
-      <script>
-          var CurrentUrl=self.location.href;
-          var CurrentLang = CurrentUrl.split('\/')[3];
-        if(CurrentLang === "fr"){
-            document.write("<option value=\"fr\" selected>Fr</option>\n" +
-                "<option value=\"en\">En</option>");
-        }
-        else {
-            document.write("<option value=\"fr\">Fr</option>\n" +
-                "<option value=\"en\" selected>En</option>");
-        }
-
-      </script>
-
+    <select data-do="select_language" class="form-control">
+      <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
+      <option value="en" <%= "selected" if session[:language] == 'en' %>>En</option>
     </select>
   </div>
+
 
 </header>
