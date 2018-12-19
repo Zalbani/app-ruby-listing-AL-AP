@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   localized do
     devise_for :users
 
-    root to: 'announces#index'
+    root to: 'listings#index'
     resources :languages, only: :show
-    resources :announces
+    resources :listings
 
     get 'listings', action: :index, controller: 'listings'
 

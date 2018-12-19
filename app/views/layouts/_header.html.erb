@@ -13,11 +13,9 @@
 
   <div class="test">
     <select data-do="select_language" class="form-control">
-      <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
       <option value="en" <%= "selected" if session[:language] == 'en' %>>En</option>
+      <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
     </select>
   </div>
-  <h4><%= link_to 'Listings', listings_path, class: "btn btn-primary"%></h4>
-
-
+  <h4><%= link_to 'Listings', new_listing_path, class: "btn btn-primary"%></h4>
 </header>

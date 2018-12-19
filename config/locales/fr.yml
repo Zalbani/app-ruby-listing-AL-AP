@@ -3,3 +3,5 @@ fr:
   header:
     logout: "Déconnexion"
     login: "Connexion"
+  homepage:
+    search: "Search"

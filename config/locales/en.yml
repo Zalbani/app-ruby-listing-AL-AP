@@ -3,3 +3,5 @@ en:
   header:
     logout: "logout"
     login: "login"
+  homepage:
+    search: "Search"

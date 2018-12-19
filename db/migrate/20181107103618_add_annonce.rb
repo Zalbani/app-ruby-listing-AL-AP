@@ -1,6 +1,6 @@
 class AddAnnonce < ActiveRecord::Migration[5.2]
   def change
-    create_table :announces do |t|
+    create_table :listings do |t|
       t.string :title
       t.text :content
       t.integer :user_id

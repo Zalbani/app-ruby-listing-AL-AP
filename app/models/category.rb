@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-has_many :announces
+has_many :annonces
   validates :name,presence:  true
 end
