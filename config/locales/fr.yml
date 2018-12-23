@@ -5,4 +5,5 @@ fr:
     login: "Connexion"
     create_listing: "Cree mon annonce"
   homepage:
-    search: "Search"
+    search: "Rechercher"
+    you_re_going_to_find: "Vous allez trouver"
