@@ -1,0 +1,21 @@
+<h1>Coucou nous sommes dans le index.html</h1>
+
+<div class="row">
+  <%= form_tag root_path, method: :get do %>
+    <%= text_field_tag 'query', nil, class: 'form-control' %>
+    <%= submit_tag t('homepage.search'), class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<% @announces.each do |post| %>
+<a href="<%= listing_path(post.id) %>">
+  <h2><%= post.title %></h2>
+
+  <% if post.picture.attached? %>
+    <%= image_tag post.picture, width: '100px' %>
+  <% end %>
+</a>
+
+<% end %>
+
+
