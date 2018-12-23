@@ -3,5 +3,6 @@ fr:
   header:
     logout: "Déconnexion"
     login: "Connexion"
+    create_listing: "Cree mon annonce"
   homepage:
     search: "Search"

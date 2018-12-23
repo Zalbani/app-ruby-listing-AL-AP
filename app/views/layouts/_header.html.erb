@@ -17,5 +17,5 @@
       <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
     </select>
   </div>
-  <h4><%= link_to 'Listings', new_listing_path, class: "btn btn-primary"%></h4>
+  <h4><%= link_to(t('header.create_listing'), new_listing_path, class: "btn btn-primary")%></h4>
 </header>

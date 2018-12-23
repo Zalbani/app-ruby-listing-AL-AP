@@ -3,5 +3,6 @@ en:
   header:
     logout: "logout"
     login: "login"
+    create_listing: "Create my listing"
   homepage:
     search: "Search"
