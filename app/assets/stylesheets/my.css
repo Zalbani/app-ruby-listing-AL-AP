@@ -1,0 +1,87 @@
+a{
+    text-decoration: none;
+    color: unset;
+}
+a:hover{
+    text-decoration: none;
+    color: unset;
+}
+header{
+    background-color: darkblue;
+    opacity: 0.8;
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    color: white;
+}
+select, option{
+    cursor: pointer;
+}
+header>h4, header>label.the_selector, header>p{
+    margin: auto 0;
+}
+header>h4:first-of-type{
+    align-self: flex-start;
+    width: 80%;
+}
+
+header>h4:first-of-type{
+    font-size: 30px;
+}
+header>h4:last-of-type, header>label.the_selector>select.language>p, header>p.bouton_log{
+    font-size: 14px;
+}
+header>p.bouton_log{
+    position: relative;
+
+}
+header>p.bouton_log:before{
+    position: absolute;
+    font-size: 14px;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "» ";
+}
+
+header>label.the_selector>select.language{
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius: 0;
+    border: none;
+    background-color: #999999;
+    color: white;
+    padding: 0 10px;
+    margin: 0;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+}
+header>label.the_selector{
+    position: relative;
+    width: 5%;
+}
+header>label.the_selector:after{
+    color: white;
+    font-size: 20px;
+    content: "^";
+    top: 40%;
+    right: 10px;
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+    display: inline-block;
+    position: absolute;
+}
+header>h4:last-of-type>a{
+    border-radius: 0;
+    border: none;
+    background-color: forestgreen;
+    transition: 0.3s;
+}
+header>h4:last-of-type>a:hover{
+    color: forestgreen;
+    background-color: white;
+}

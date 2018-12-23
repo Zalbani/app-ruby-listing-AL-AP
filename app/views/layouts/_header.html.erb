@@ -2,20 +2,19 @@
   <h4><%= link_to 'Listing', root_path, class: "title"%></h4>
   <!-- Login / LogOut option-->
   <% if user_signed_in? %>
-    <li class="bouton_log_out">
+    <p class="bouton_log">
       <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
-    </li>
+    </p>
   <% else %>
-    <li class="bouton_log_in">
+    <p class="bouton_log">
       <%= link_to(t('header.login'), new_user_session_path)  %>
-    </li>
+    </p>
   <% end %>
-
-  <div class="test">
-    <select data-do="select_language" class="form-control">
+  <label class="the_selector">
+    <select data-do="select_language" class="form-control language">
       <option value="en" <%= "selected" if session[:language] == 'en' %>>En</option>
       <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
     </select>
-  </div>
+  </label>
   <h4><%= link_to(t('header.create_listing'), new_listing_path, class: "btn btn-primary")%></h4>
 </header>
