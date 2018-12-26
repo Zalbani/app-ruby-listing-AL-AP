@@ -1,3 +1,5 @@
+/* Gemeral style */
+
 a{
     text-decoration: none;
     color: unset;
@@ -6,6 +8,30 @@ a:hover{
     text-decoration: none;
     color: unset;
 }
+section:first-of-type{
+    padding: 50px 0 0 0;
+}
+.vanish{
+    display: none;
+}
+
+/* Style partage */
+
+
+.green_button{
+    border-radius: 0;
+    border: none;
+    background-color: forestgreen;
+    transition: 0.3s;
+}
+.green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active{
+    color: forestgreen;
+    background-color: white;
+}
+
+
+/* Header Style */
+
 header{
     background-color: darkblue;
     opacity: 0.8;
@@ -13,6 +39,12 @@ header{
     padding: 10px 15px;
     justify-content: space-between;
     color: white;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 select, option{
     cursor: pointer;
@@ -55,13 +87,23 @@ header>label.the_selector>select.language{
     margin: 0;
     outline:none;
     display: inline-block;
+    /*
+
+    Fix custom arrow can't be clicked
+
     -webkit-appearance:none;
     -moz-appearance:none;
+    */
 }
 header>label.the_selector{
     position: relative;
     width: 5%;
 }
+/*
+
+    Fix custom arrow can't be clicked
+
+
 header>label.the_selector:after{
     color: white;
     font-size: 20px;
@@ -75,13 +117,48 @@ header>label.the_selector:after{
     display: inline-block;
     position: absolute;
 }
-header>h4:last-of-type>a{
-    border-radius: 0;
-    border: none;
-    background-color: forestgreen;
-    transition: 0.3s;
+*/
+
+
+/* Home Page Style */
+
+section.home{
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("bg_city_2.jpg");
+    background-size: cover;
 }
-header>h4:last-of-type>a:hover{
-    color: forestgreen;
-    background-color: white;
+
+section.home input.search{
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 50%;
+    width: 40%;
+    height: 36px;
+    transform: translateX(-65%);
+    border: none;
+    border-radius: 0;
+}
+section.home input.search_submit{
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 65%;
+    width: 10%;
+    height: 36px;
+    border-radius: 0;
+}
+
+section.home>h1{
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
 }
