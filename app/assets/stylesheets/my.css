@@ -11,6 +11,23 @@ a:hover{
 section:first-of-type{
     padding: 50px 0 0 0;
 }
+.vanish{
+    display: none;
+}
+
+/* Style partage */
+
+
+.green_button{
+    border-radius: 0;
+    border: none;
+    background-color: forestgreen;
+    transition: 0.3s;
+}
+.green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active{
+    color: forestgreen;
+    background-color: white;
+}
 
 
 /* Header Style */
@@ -101,16 +118,7 @@ header>label.the_selector:after{
     position: absolute;
 }
 */
-header>h4:last-of-type>a{
-    border-radius: 0;
-    border: none;
-    background-color: forestgreen;
-    transition: 0.3s;
-}
-header>h4:last-of-type>a:hover{
-    color: forestgreen;
-    background-color: white;
-}
+
 
 /* Home Page Style */
 
@@ -123,6 +131,34 @@ section.home{
     background-image: url("bg_city_2.jpg");
     background-size: cover;
 }
-section.home input{
-    width: 50%;
+
+section.home input.search{
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 50%;
+    width: 40%;
+    height: 36px;
+    transform: translateX(-65%);
+    border: none;
+    border-radius: 0;
+}
+section.home input.search_submit{
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 65%;
+    width: 10%;
+    height: 36px;
+    border-radius: 0;
+}
+
+section.home>h1{
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
 }
