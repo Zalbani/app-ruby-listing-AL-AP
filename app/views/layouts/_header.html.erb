@@ -2,11 +2,11 @@
   <h4><%= link_to 'Listing', root_path, class: "title"%></h4>
   <!-- Login / LogOut option-->
   <% if user_signed_in? %>
-    <p class="bouton_log">
+    <p class="bouton_log out">
       <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
     </p>
   <% else %>
-    <p class="bouton_log">
+    <p class="bouton_log in">
       <%= link_to(t('header.login'), new_user_session_path)  %>
     </p>
   <% end %>

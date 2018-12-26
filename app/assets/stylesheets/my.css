@@ -75,6 +75,9 @@ header>p.bouton_log:before{
     transform: translateY(-50%);
     content: "» ";
 }
+header>p.bouton_log.out:before{
+    color: red;
+}
 
 header>label.the_selector>select.language{
     -webkit-border-radius:0;
