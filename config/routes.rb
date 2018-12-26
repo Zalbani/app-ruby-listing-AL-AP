@@ -9,16 +9,7 @@ Rails.application.routes.draw do
     resources :listings
 
     get 'listings', action: :index, controller: 'listings'
-
-
-
-
-
-
-    namespace :admin do
-      root to: 'dashboard#index'
-      resources :posts
-    end
+    
   end
 
   # TO-DO bug with /admin

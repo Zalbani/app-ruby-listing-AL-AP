@@ -30,6 +30,8 @@ rails db:seed
 
 * [Routing](https://edgeguides.rubyonrails.org/routing.html) - RailsGuides
 * [Devise](https://github.com/plataformatec/devise) - Gem Devise Wiki 
+* [Rails Admin](https://github.com/sferik/rails_admin) - Gem Rails Admin GitHub 
+
 
 ### Prerequisites
 
