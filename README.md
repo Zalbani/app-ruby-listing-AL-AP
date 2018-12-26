@@ -24,6 +24,18 @@ Data loading
 ```
 rails db:seed
 ```
+
+Connection as Admin
+```
+Mail : admin@mail.com
+Password : password
+```
+
+Connection as User
+```
+Mail : user@mail.com
+Password : password
+```
 ### UseFull link
 
 * [Spec](https://s3.eu-central-1.amazonaws.com/gbarillot-ynov-ruby/files/specs_listings.pdf) - Project specification
