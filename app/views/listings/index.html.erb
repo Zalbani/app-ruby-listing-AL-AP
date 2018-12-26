@@ -1,6 +1,9 @@
+<section class="home">
+
+
 <h1><%= t('homepage.you_re_going_to_find') %></h1>
 
-<div class="row">
+<div>
   <%= form_tag root_path, method: :get do %>
     <%= text_field_tag 'query', nil, class: 'form-control' %>
     <%= submit_tag t('homepage.search'), class: 'btn btn-primary' %>
@@ -17,5 +20,6 @@
 </a>
 
 <% end %>
+</section>
 
 
