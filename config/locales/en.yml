@@ -1,9 +1,21 @@
 en:
   test: "Je suis en Anglais"
   header:
-    logout: "logout"
-    login: "login"
+    logout: "Logout"
+    login: "Login"
     create_listing: "Create my listing"
   homepage:
     search: "Search"
     you_re_going_to_find: "You're going to find !"
+  session_new:
+    log_in: "Log in"
+    login: "Login"
+    email: "Email"
+    password: "Password"
+    remember_me: "Remember me"
+  session_link:
+    log_in: "Log in"
+    sign_up: "Sign up"
+    forgot_password: "Forgot your password ?"
+    didnt_receive_confir_intruct: "Didn't receive confirmation instructions ?"
+    didnt_receive_unlock_intruct: "Didn't receive unlock instructions ?"
