@@ -1,3 +1,5 @@
+/* Gemeral style */
+
 a{
     text-decoration: none;
     color: unset;
@@ -6,6 +8,13 @@ a:hover{
     text-decoration: none;
     color: unset;
 }
+section:first-of-type{
+    padding: 50px 0 0 0;
+}
+
+
+/* Header Style */
+
 header{
     background-color: darkblue;
     opacity: 0.8;
@@ -61,13 +70,23 @@ header>label.the_selector>select.language{
     margin: 0;
     outline:none;
     display: inline-block;
+    /*
+
+    Fix custom arrow can't be clicked
+
     -webkit-appearance:none;
     -moz-appearance:none;
+    */
 }
 header>label.the_selector{
     position: relative;
     width: 5%;
 }
+/*
+
+    Fix custom arrow can't be clicked
+
+
 header>label.the_selector:after{
     color: white;
     font-size: 20px;
@@ -81,6 +100,7 @@ header>label.the_selector:after{
     display: inline-block;
     position: absolute;
 }
+*/
 header>h4:last-of-type>a{
     border-radius: 0;
     border: none;
@@ -92,9 +112,7 @@ header>h4:last-of-type>a:hover{
     background-color: white;
 }
 
-section:first-of-type{
-    padding: 50px 0 0 0;
-}
+/* Home Page Style */
 
 section.home{
     margin: 0;
