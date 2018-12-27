@@ -5,6 +5,10 @@
     <p class="bouton_log out">
       <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
     </p>
+    <!-- TO DO if is admin -->
+    <p class="bouton_log">
+      <%= link_to(t('header.dashboard'), rails_admin_path) %>
+    </p>
   <% else %>
     <p class="bouton_log in">
       <%= link_to(t('header.login'), new_user_session_path)  %>

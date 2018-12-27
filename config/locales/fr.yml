@@ -4,6 +4,19 @@ fr:
     logout: "Déconnexion"
     login: "Connexion"
     create_listing: "Cree mon annonce"
+    dashboard: "Tableau de bord"
   homepage:
     search: "Rechercher"
     you_re_going_to_find: "Vous allez trouver !"
+  session_new:
+    log_in: "Se connecter"
+    login: "Connection"
+    email: "Email"
+    password: "Mot de passe"
+    remember_me: "Se souvenir de moi"
+  session_link:
+    log_in: "Se connecter"
+    sign_up: "S'inscrire"
+    forgot_password: "Mot de passe oublié ?"
+    didnt_receive_confir_intruct: "Vous n'avez pas reçu d'instructions de confirmation ?"
+    didnt_receive_unlock_intruct: "Vous n'avez pas reçu d'instructions de déverrouillage ?"
