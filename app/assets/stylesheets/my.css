@@ -43,13 +43,21 @@ section:first-of-type{
 
 .orange_text{
     color: #FF6D42;
+    transition: 0.3s;
+}
+.orange_text:hover, .orange_text:focus, .orange_text:active, .orange_text:hover:active{
+    color: white;
+}
+
+.grey_bg{
+    background-color: #465E6A;
 }
 
 
 /* Header Style */
 
 header{
-    background-color: #6c8a99;
+    background-color: #465E6A;
     opacity: 0.8;
     display: flex;
     padding: 10px 15px;
@@ -70,7 +78,7 @@ header>h4, header>label.the_selector, header>p{
 }
 header>h4:first-of-type{
     align-self: flex-start;
-    width: 80%;
+    width: 70%;
 }
 
 header>h4:first-of-type{
@@ -81,7 +89,7 @@ header>h4:last-of-type, header>label.the_selector>select.language>p, header>p.bo
 }
 header>p.bouton_log{
     position: relative;
-
+    margin: auto 15px;
 }
 header>p.bouton_log:before{
     position: absolute;
@@ -181,3 +189,38 @@ section.home>h1{
     font-weight: bold;
     color: white;
 }
+
+/* Login Page Style */
+
+.login_page{
+    position: relative;
+}
+.login_page h1{
+    margin-top: 80px;
+    padding: 0 0 0 25px;
+}
+.login_page form{
+    padding: 40px;
+    margin-top: 40px;
+    color: white;
+    position: relative;
+}
+
+.login_page form .field label{
+    margin: 0;
+}
+.login_page form .field.large input{
+    height: 36px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.login_page form .actions{
+    text-align: right;
+}
+.login_page .other_links{
+    position: absolute;
+    bottom: 20px;
+    left: 55px;
+}
+

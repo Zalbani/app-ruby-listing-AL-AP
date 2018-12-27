@@ -4,6 +4,7 @@ en:
     logout: "Logout"
     login: "Login"
     create_listing: "Create my listing"
+    dashboard: "Dashboard"
   homepage:
     search: "Search"
     you_re_going_to_find: "You're going to find !"

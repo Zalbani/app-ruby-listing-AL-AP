@@ -4,6 +4,7 @@ fr:
     logout: "Déconnexion"
     login: "Connexion"
     create_listing: "Cree mon annonce"
+    dashboard: "Tableau de bord"
   homepage:
     search: "Rechercher"
     you_re_going_to_find: "Vous allez trouver !"
