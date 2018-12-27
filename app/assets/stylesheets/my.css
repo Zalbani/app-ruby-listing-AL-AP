@@ -21,19 +21,35 @@ section:first-of-type{
 .green_button{
     border-radius: 0;
     border: none;
-    background-color: forestgreen;
+    background-color: #00B871;
     transition: 0.3s;
 }
 .green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active{
-    color: forestgreen;
+    color: #00B871;
     background-color: white;
+}
+
+.orange_button{
+    border-radius: 0;
+    border: none;
+    background-color: #FF6D42;
+    transition: 0.3s;
+}
+
+.orange_button:hover, .orange_button:focus, .orange_button:active, .orange_button:hover:active{
+    color: #FF6D42;
+    background-color: white;
+}
+
+.orange_text{
+    color: #FF6D42;
 }
 
 
 /* Header Style */
 
 header{
-    background-color: darkblue;
+    background-color: #6c8a99;
     opacity: 0.8;
     display: flex;
     padding: 10px 15px;
