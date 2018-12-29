@@ -8,6 +8,7 @@ en:
   homepage:
     search: "Search"
     you_re_going_to_find: "You're going to find !"
+    what_searching_for: "What are you searching for ?"
   general_log:
     log_in: "Log in"
     login: "Login"
