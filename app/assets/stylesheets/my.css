@@ -220,14 +220,12 @@ section.home>h1{
 }
 .log_page .other_links{
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 55px;
 }
 
 /* Editing sign_up Page Sytle */
 
 .log_page.sign_up .other_links{
-    position: absolute;
     bottom: 45px;
-    left: 55px;
 }
