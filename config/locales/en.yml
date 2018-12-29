@@ -14,10 +14,10 @@ en:
     sign_up: "Sign up"
     email: "Email"
     password: "Password"
+    forgot_password: "Forgot your password ?"
   session_new:
     remember_me: "Remember me"
   session_link:
-    forgot_password: "Forgot your password ?"
     didnt_receive_confir_intruct: "Didn't receive confirmation instructions ?"
     didnt_receive_unlock_intruct: "Didn't receive unlock instructions ?"
   registration_new:
@@ -25,5 +25,7 @@ en:
     last_name: "Last name"
     password_confirmation: "Password confirmation"
     character_min: "characters minimum"
+  reset_pass:
+    send_pass_instruct: "Send me reset password instructions"
 
 
