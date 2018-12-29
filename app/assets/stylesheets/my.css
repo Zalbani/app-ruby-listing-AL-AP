@@ -190,37 +190,44 @@ section.home>h1{
     color: white;
 }
 
-/* Login Page Style */
+/* Log Page Style */
 
-.login_page{
+.log_page{
     position: relative;
 }
-.login_page h1{
+.log_page h1{
     margin-top: 80px;
     padding: 0 0 0 25px;
 }
-.login_page form{
+.log_page form{
     padding: 40px;
     margin-top: 40px;
     color: white;
     position: relative;
 }
 
-.login_page form .field label{
+.log_page form .field label{
     margin: 0;
 }
-.login_page form .field.large input{
+.log_page form .field.large input{
     height: 36px;
     width: 100%;
     margin-bottom: 18px;
 }
 
-.login_page form .actions{
+.log_page form .actions{
     text-align: right;
 }
-.login_page .other_links{
+.log_page .other_links{
     position: absolute;
     bottom: 20px;
     left: 55px;
 }
 
+/* Editing sign_up Page Sytle */
+
+.log_page.sign_up .other_links{
+    position: absolute;
+    bottom: 45px;
+    left: 55px;
+}
