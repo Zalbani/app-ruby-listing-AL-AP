@@ -8,15 +8,20 @@ fr:
   homepage:
     search: "Rechercher"
     you_re_going_to_find: "Vous allez trouver !"
-  session_new:
+  general_log:
     log_in: "Se connecter"
     login: "Connection"
+    sign_up: "S'inscrire"
     email: "Email"
     password: "Mot de passe"
+  session_new:
     remember_me: "Se souvenir de moi"
   session_link:
-    log_in: "Se connecter"
-    sign_up: "S'inscrire"
     forgot_password: "Mot de passe oublié ?"
     didnt_receive_confir_intruct: "Vous n'avez pas reçu d'instructions de confirmation ?"
     didnt_receive_unlock_intruct: "Vous n'avez pas reçu d'instructions de déverrouillage ?"
+  registration_new:
+    first_name: "Prénom"
+    last_name: "Nom"
+    password_confirmation: "Confirmer le mot de passe"
+    character_min: "caractères minimum"

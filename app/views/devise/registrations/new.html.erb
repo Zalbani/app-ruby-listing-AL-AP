@@ -1,41 +1,42 @@
 <section class="container log_page sign_up">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      <h1>Sign up</h1>
+      <h1><%= t('general_log.sign_up') %></h1>
       <div class="grey_bg">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
 
          <div class="field large">
-            <%= f.label :email %><br />
+            <%= f.label t('general_log.email') %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <!-- To Do : Add information to database -->
+          <div class="field large">
+            <%= f.label t('registration_new.first_name') %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
 
           <div class="field large">
-            <%= f.label :firstname %><br />
+            <%= f.label t('registration_new.last_name') %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
 
           <div class="field large">
-            <%= f.label :lasname %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-          </div>
-
-          <div class="field large">
-            <%= f.label :password %>
+            <%= f.label t('general_log.password') %>
             <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <em>(<%= @minimum_password_length %> <%= t('registration_new.character_min') %>)</em>
             <% end %><br />
             <%= f.password_field :password, autocomplete: "new-password" %>
           </div>
 
           <div class="field large">
-            <%= f.label :password_confirmation %><br />
+            <%= f.label t('registration_new.password_confirmation') %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
           </div>
 
           <div class="actions">
-            <%= f.submit "Sign up", class: 'btn btn-primary search_submit orange_button' %>
+            <%= f.submit t('general_log.sign_up'), class: 'btn btn-primary search_submit orange_button' %>
           </div>
         <% end %>
         <div class="other_links">
