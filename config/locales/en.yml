@@ -28,5 +28,16 @@ en:
     character_min: "characters minimum"
   reset_pass:
     send_pass_instruct: "Send me reset password instructions"
+  general_listing:
+    title: "Title"
+    description: "Description"
+    category: "Category"
+    picture: "Picture"
+    price: "Price"
+    save: "Save"
+  create_listing:
+    create_my_listing: "Create my listing"
+    required_file: "Required field"
+
 
 

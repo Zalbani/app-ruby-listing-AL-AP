@@ -1,1 +1,43 @@
-<h1>Nous sommes sur le new.html.erb</h1>
+<section class="container form_page forgot_pass">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1><%= t('create_listing.create_my_listing') %></h1>
+      <div class="grey_bg">
+        <%= form_tag listings_path, method: :post, multipart: true, class: 'form' do %>
+
+          <div class="field large">
+            <label><%= t('general_listing.title') %>*</label><br/>
+            <%= text_field_tag 'listing[title]', @listing.title%>
+          </div>
+          <div class="field large">
+            <label><%= t('general_listing.category') %>*</label>
+            <select name="listing[category_id]" class="form-control">
+              <% Category.all.each do |category| %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+              <% end %>
+            </select>
+          </div>
+          <div class="field large">
+            <label><%= t('general_listing.description') %>*</label>
+            <%= text_area_tag 'listing[content]', @listing.content%>
+          </div>
+          <div class="field large">
+            <label><%= t('general_listing.picture') %>*</label>
+            <%= file_field_tag 'listing[picture]', class: 'upload' %>
+          </div>
+          <div class="field large">
+            <label><%= t('general_listing.price') %>*</label>
+            <%= number_field_tag 'listing[price]', @listing.price%>
+          </div>
+          <div class="actions">
+            <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button" %>
+          </div>
+        <% end %>
+        </form>
+        <div class="other_links">
+          <p class="white_text">*<%= t('create_listing.required_file') %></p><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

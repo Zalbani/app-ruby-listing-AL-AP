@@ -27,4 +27,14 @@ fr:
     password_confirmation: "Confirmer le mot de passe"
     character_min: "caractères minimum"
   reset_pass:
-    send_pass_instruct: "Envoyez la réinitialisation du mot de passe  "
+    send_pass_instruct: "Envoyez la réinitialisation du mot de passe"
+  general_listing:
+    title: "Titre"
+    description: "Description"
+    category: "Catégorie"
+    picture: "Image"
+    price: "Prix"
+    save: "Sauvegarder"
+  create_listing:
+    create_my_listing: "Cree mon annonce"
+    required_file:  "Champs obligatoires"
