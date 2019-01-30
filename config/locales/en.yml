@@ -35,9 +35,22 @@ en:
     picture: "Picture"
     price: "Price"
     save: "Save"
+    error: "An error has occurred"
+    disconected: "You need to be logged in to access this page.You need to be logged in to access this page."
   create_listing:
     create_my_listing: "Create my listing"
     required_file: "Required field"
+  activerecord:
+    errors:
+      models:
+        annonce:
+          attributes:
+            content:
+              blank: "The description field cannot be empty"
+            price:
+              blank: "The price field cannot be empty"
+            title:
+              blank: "The title field cannot be empty"
 
 
 

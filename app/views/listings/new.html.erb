@@ -1,43 +1,94 @@
-<section class="container form_page forgot_pass">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1><%= t('create_listing.create_my_listing') %></h1>
-      <div class="grey_bg">
-        <%= form_tag listings_path, method: :post, multipart: true, class: 'form' do %>
-
-          <div class="field large">
-            <label><%= t('general_listing.title') %>*</label><br/>
-            <%= text_field_tag 'listing[title]', @listing.title%>
-          </div>
-          <div class="field large">
-            <label><%= t('general_listing.category') %>*</label>
-            <select name="listing[category_id]" class="form-control">
-              <% Category.all.each do |category| %>
-                <option value="<%= category.id %>"><%= category.name %></option>
-              <% end %>
-            </select>
-          </div>
-          <div class="field large">
-            <label><%= t('general_listing.description') %>*</label>
-            <%= text_area_tag 'listing[content]', @listing.content%>
-          </div>
-          <div class="field large">
-            <label><%= t('general_listing.picture') %>*</label>
-            <%= file_field_tag 'listing[picture]', class: 'upload' %>
-          </div>
-          <div class="field large">
-            <label><%= t('general_listing.price') %>*</label>
-            <%= number_field_tag 'listing[price]', @listing.price%>
-          </div>
-          <div class="actions">
-            <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button" %>
-          </div>
-        <% end %>
-        </form>
-        <div class="other_links">
-          <p class="white_text">*<%= t('create_listing.required_file') %></p><br />
+<% if @listing.errors.messages.any? %>
+  <div class="modal d_block" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('general_listing.error') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <% @listing.errors.messages.each do |key, errors| %>
+            <% errors.each do | error| %>
+              <p><%= error %></p>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-</section>
+<% end %>
+
+<% if current_user.present? %>
+  <section class="container form_page forgot_pass">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1><%= t('create_listing.create_my_listing') %></h1>
+        <div class="grey_bg">
+          <%= form_tag listings_path, method: :post, multipart: true, class: 'form' do %>
+
+            <div class="field large">
+              <label><%= t('general_listing.title') %>*</label><br/>
+              <%= text_field_tag 'listing[title]', @listing.title, :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.category') %>*</label>
+              <select name="listing[category_id]" class="form-control">
+                <% Category.all.each do |category| %>
+                  <option value="<%= category.id %>"><%= category.name %></option>
+                <% end %>
+              </select>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.description') %>*</label>
+              <%= text_area_tag 'listing[content]', @listing.content, :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.picture') %>*</label>
+              <%= file_field_tag 'listing[picture]', class: 'upload', :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.price') %>*</label>
+              <%= number_field_tag 'listing[price]', @listing.price, :required => true%>
+            </div>
+            <div class="actions">
+              <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button" %>
+            </div>
+          <% end %>
+          </form>
+          <div class="other_links">
+            <p class="white_text">*<%= t('create_listing.required_file') %></p><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<%else%>
+  <div class="modal d_block " tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('general_listing.disconected') %></h5>
+          <button type="button" class="close to_home" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <%= link_to(t('header.login'), new_user_session_path, class: 'btn btn-primary  green_button')  %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script>
+    $( ".close" ).click(function() {
+        $( ".modal.d_block" ).addClass( "vanish_opa").delay(600).removeClass("d_block");
+    });
+    $( ".close.to_home" ).click(function() {
+        window.location.replace("<%= root_path %>");
+    });
+</script>
+
+
+

@@ -35,6 +35,19 @@ fr:
     picture: "Image"
     price: "Prix"
     save: "Sauvegarder"
+    error: "Une erreur est survenue !"
+    disconected: "Vous avez besoin d'etre connecte pour pouvoir accéder a cette page."
   create_listing:
     create_my_listing: "Cree mon annonce"
     required_file:  "Champs obligatoires"
+  activerecord:
+    errors:
+      models:
+        annonce:
+          attributes:
+            content:
+              blank: "Le champ description ne peux pas etre vide"
+            price:
+              blank: "Le champ prix ne peux pas etre vide"
+            title:
+              blank: "Le champ titre ne peux pas etre vide"
