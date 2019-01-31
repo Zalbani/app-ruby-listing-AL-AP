@@ -9,6 +9,19 @@
     <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
   <% end %>
 </div>
+  <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('homepage.created_listing') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
 <% @announces.each do |post| %>
     <section class="vanish">
@@ -22,4 +35,24 @@
 <% end %>
 </section>
 
+<script>
+    function $_GET() {
+        var vars = {};
+        window.location.href.replace( location.hash, '' ).replace(
+            /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+            function( m, key, value ) { // callback
+                vars[key] = value !== undefined ? value : '';
+            }
+        );
+        return vars;
+    }
+    var params = $_GET();
+    if(params.created_annonce === 'true'){
+        console.log("GG WP");
+        $( ".modal" ).addClass('d_block');
+    }
 
+    $( ".close" ).click(function() {
+        $( ".modal.d_block" ).removeClass("d_block");
+    });
+</script>

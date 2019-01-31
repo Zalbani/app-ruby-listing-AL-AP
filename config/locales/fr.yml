@@ -9,6 +9,7 @@ fr:
     search: "Rechercher"
     you_re_going_to_find: "Vous allez trouver !"
     what_searching_for: "Qu'est-ce que vous recherchez ?"
+    created_listing: "Votre annonce a bien ete cree !"
   general_log:
     log_in: "Se connecter"
     login: "Connection"

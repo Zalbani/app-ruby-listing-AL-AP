@@ -9,6 +9,7 @@ en:
     search: "Search"
     you_re_going_to_find: "You're going to find !"
     what_searching_for: "What are you searching for ?"
+    created_listing: "Your listing has been created!"
   general_log:
     log_in: "Log in"
     login: "Login"

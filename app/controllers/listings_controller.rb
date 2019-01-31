@@ -17,7 +17,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Annonce.new(listings_params)
     if @listing.save
-      redirect_to root_path
+      redirect_to controller: 'listings', created_annonce: 'true'
     else
       render template: '/listings/new'
     end
