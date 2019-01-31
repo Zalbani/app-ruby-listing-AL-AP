@@ -40,6 +40,8 @@ en:
   create_listing:
     create_my_listing: "Create my listing"
     required_file: "Required field"
+    price_bug: "Please enter a valid price"
+    price_bug_desc: "Do not put space in the price and enter two digits after the decimal point"
   activerecord:
     errors:
       models:

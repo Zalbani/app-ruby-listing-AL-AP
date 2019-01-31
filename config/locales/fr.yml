@@ -40,6 +40,8 @@ fr:
   create_listing:
     create_my_listing: "Cree mon annonce"
     required_file:  "Champs obligatoires"
+    price_bug: "Veuillez entrer un prix valide"
+    price_bug_desc: "Ne mettez pas d'espace dans le prix et entrer deux chiffres apres la virgule"
   activerecord:
     errors:
       models:

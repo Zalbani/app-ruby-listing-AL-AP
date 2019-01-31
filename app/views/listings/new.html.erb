@@ -21,6 +21,22 @@
 <% end %>
 
 <% if current_user.present? %>
+  <div class="modal" id="bug_price" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('create_listing.price_bug') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><%= t('create_listing.price_bug_desc') %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   <section class="container form_page forgot_pass">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -50,10 +66,10 @@
             </div>
             <div class="field large">
               <label><%= t('general_listing.price') %>*</label>
-              <%= number_field_tag 'listing[price]', @listing.price, :required => true%>
+              <%= text_field_tag 'listing[price]', @listing.price, :required => true, id: 'price' %>
             </div>
             <div class="actions">
-              <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button" %>
+              <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button", :disabled => true, id: "submit"  %>
             </div>
           <% end %>
           </form>
@@ -83,11 +99,44 @@
 
 <script>
     $( ".close" ).click(function() {
-        $( ".modal.d_block" ).addClass( "vanish_opa").delay(600).removeClass("d_block");
+        $( ".modal.d_block" ).removeClass("d_block");
     });
     $( ".close.to_home" ).click(function() {
         window.location.replace("<%= root_path %>");
     });
+
+
+
+    var float= /^\s*(\d+((\.\d{2})|(\,\d{2})?)|(\.\d+))\s*$/;
+    var submit = $("#submit");
+
+
+    window.setInterval(function(){
+        var price = $("#price").val();
+        if (float.test(price)) {
+            submit.removeAttr('disabled');
+        }
+        else {
+            submit.attr('disabled','disabled');
+        }
+    }, 500);
+
+
+    $( "#price" ).change(function() {
+        var price = $("#price").val();
+        if (float.test(price)) {
+            submit.removeAttr('disabled');
+        }
+        else {
+            submit.attr('disabled','disabled');
+            $("#bug_price").addClass('d_block');
+        }
+    });
+
+
+
+
+
 </script>
 
 
