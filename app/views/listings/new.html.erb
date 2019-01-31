@@ -15,6 +15,9 @@
             <% end %>
           <% end %>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
       </div>
     </div>
   </div>
@@ -32,6 +35,9 @@
         </div>
         <div class="modal-body">
           <p><%= t('create_listing.price_bug_desc') %></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
         </div>
       </div>
     </div>
@@ -98,19 +104,13 @@
 <% end %>
 
 <script>
-    $( ".close" ).click(function() {
-        $( ".modal.d_block" ).removeClass("d_block");
-    });
     $( ".close.to_home" ).click(function() {
         window.location.replace("<%= root_path %>");
     });
 
 
-
     var float= /^\s*(\d+((\.\d{2})|(\,\d{2})?)|(\.\d+))\s*$/;
     var submit = $("#submit");
-
-
     window.setInterval(function(){
         var price = $("#price").val();
         if (float.test(price)) {
@@ -133,9 +133,12 @@
         }
     });
 
-
-
-
+    $( ".close" ).click(function() {
+        close_modal();
+    });
+    $( "#close" ).click(function() {
+        close_modal();
+    });
 
 </script>
 

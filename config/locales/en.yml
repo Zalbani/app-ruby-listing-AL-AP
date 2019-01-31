@@ -38,6 +38,7 @@ en:
     save: "Save"
     error: "An error has occurred"
     disconected: "You need to be logged in to access this page.You need to be logged in to access this page."
+    close: "Close"
   create_listing:
     create_my_listing: "Create my listing"
     required_file: "Required field"

@@ -38,6 +38,7 @@ fr:
     save: "Sauvegarder"
     error: "Une erreur est survenue !"
     disconected: "Vous avez besoin d'etre connecte pour pouvoir accéder a cette page."
+    close: "Fermer"
   create_listing:
     create_my_listing: "Cree mon annonce"
     required_file:  "Champs obligatoires"

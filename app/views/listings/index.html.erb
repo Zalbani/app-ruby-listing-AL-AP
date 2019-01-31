@@ -18,6 +18,9 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
       </div>
     </div>
   </div>
@@ -36,23 +39,15 @@
 </section>
 
 <script>
-    function $_GET() {
-        var vars = {};
-        window.location.href.replace( location.hash, '' ).replace(
-            /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-            function( m, key, value ) { // callback
-                vars[key] = value !== undefined ? value : '';
-            }
-        );
-        return vars;
-    }
+    $( ".close" ).click(function() {
+        close_modal();
+    });
+    $( "#close" ).click(function() {
+        close_modal();
+    });
+
     var params = $_GET();
     if(params.created_annonce === 'true'){
-        console.log("GG WP");
         $( ".modal" ).addClass('d_block');
     }
-
-    $( ".close" ).click(function() {
-        $( ".modal.d_block" ).removeClass("d_block");
-    });
 </script>
