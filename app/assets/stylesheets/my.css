@@ -14,6 +14,10 @@ section:first-of-type{
 .vanish{
     display: none;
 }
+.d_block{
+    opacity: 1;
+    display: block;
+}
 
 /* Style shared */
 
@@ -24,7 +28,7 @@ section:first-of-type{
     background-color: #00B871;
     transition: 0.3s;
 }
-.green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active{
+.green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active, .green_button:disabled, .green_button:hover:disabled{
     color: #00B871;
     background-color: white;
 }
@@ -36,13 +40,17 @@ section:first-of-type{
     transition: 0.3s;
 }
 
-.orange_button:hover, .orange_button:focus, .orange_button:active, .orange_button:hover:active{
+.orange_button:hover, .orange_button:focus, .orange_button:active, .orange_button:hover:active, .orange_button:disabled, .orange_button:hover:disabled{
     color: #FF6D42;
     background-color: white;
 }
 
 .orange_text{
     color: #FF6D42;
+    transition: 0.3s;
+}
+.white_text{
+    color: #fff;
     transition: 0.3s;
 }
 .orange_text:hover, .orange_text:focus, .orange_text:active, .orange_text:hover:active{
@@ -190,35 +198,47 @@ section.home>h1{
     color: white;
 }
 
-/* Log Page Style */
+/* Form Page Style */
 
-.log_page{
+.form_page{
     position: relative;
 }
-.log_page h1{
+.form_page h1{
     margin-top: 80px;
     padding: 0 0 0 25px;
 }
-.log_page form{
+.form_page form{
     padding: 40px;
     margin-top: 40px;
     color: white;
     position: relative;
 }
-
-.log_page form .field label{
-    margin: 0;
-}
-.log_page form .field.large input{
-    height: 36px;
-    width: 100%;
+.form_page form .field{
     margin-bottom: 18px;
 }
+.form_page form .field label{
+    margin: 0;
+}
+.form_page form .field.large input, .form_page form .field.large textarea, .form_page form .field.large .upload{
+    height: 36px;
+    width: 100%;
+    border-radius: 4px;
+}
+.form_page form .field.large textarea{
+    height: 190px;
+}
+.form_page form .field.large .upload{
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    color: black;
+}
 
-.log_page form .actions{
+
+.form_page form .actions{
     text-align: right;
 }
-.log_page .other_links{
+.form_page .other_links{
     position: absolute;
     bottom: 25px;
     left: 55px;
@@ -226,6 +246,6 @@ section.home>h1{
 
 /* Editing sign_up Page Sytle */
 
-.log_page.sign_up .other_links{
+.form_page.sign_up .other_links{
     bottom: 45px;
 }

@@ -9,6 +9,7 @@ en:
     search: "Search"
     you_re_going_to_find: "You're going to find !"
     what_searching_for: "What are you searching for ?"
+    created_listing: "Your listing has been created!"
   general_log:
     log_in: "Log in"
     login: "Login"
@@ -28,5 +29,32 @@ en:
     character_min: "characters minimum"
   reset_pass:
     send_pass_instruct: "Send me reset password instructions"
+  general_listing:
+    title: "Title"
+    description: "Description"
+    category: "Category"
+    picture: "Picture"
+    price: "Price"
+    save: "Save"
+    error: "An error has occurred"
+    disconected: "You need to be logged in to access this page.You need to be logged in to access this page."
+    close: "Close"
+  create_listing:
+    create_my_listing: "Create my listing"
+    required_file: "Required field"
+    price_bug: "Please enter a valid price"
+    price_bug_desc: "Do not put space in the price and enter two digits after the decimal point"
+  activerecord:
+    errors:
+      models:
+        annonce:
+          attributes:
+            content:
+              blank: "The description field cannot be empty"
+            price:
+              blank: "The price field cannot be empty"
+            title:
+              blank: "The title field cannot be empty"
+
 
 

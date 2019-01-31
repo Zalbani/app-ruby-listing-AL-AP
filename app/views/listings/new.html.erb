@@ -1,1 +1,146 @@
-<h1>Nous sommes sur le new.html.erb</h1>
+<% if @listing.errors.messages.any? %>
+  <div class="modal d_block" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('general_listing.error') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <% @listing.errors.messages.each do |key, errors| %>
+            <% errors.each do | error| %>
+              <p><%= error %></p>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% if current_user.present? %>
+  <div class="modal" id="bug_price" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('create_listing.price_bug') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><%= t('create_listing.price_bug_desc') %></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <section class="container form_page forgot_pass">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1><%= t('create_listing.create_my_listing') %></h1>
+        <div class="grey_bg">
+          <%= form_tag listings_path, method: :post, multipart: true, class: 'form' do %>
+
+            <div class="field large">
+              <label><%= t('general_listing.title') %>*</label><br/>
+              <%= text_field_tag 'listing[title]', @listing.title, :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.category') %>*</label>
+              <select name="listing[category_id]" class="form-control">
+                <% Category.all.each do |category| %>
+                  <option value="<%= category.id %>"><%= category.name %></option>
+                <% end %>
+              </select>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.description') %>*</label>
+              <%= text_area_tag 'listing[content]', @listing.content, :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.picture') %>*</label>
+              <%= file_field_tag 'listing[picture]', class: 'upload', :required => true%>
+            </div>
+            <div class="field large">
+              <label><%= t('general_listing.price') %>*</label>
+              <%= text_field_tag 'listing[price]', @listing.price, :required => true, id: 'price' %>
+            </div>
+            <div class="actions">
+              <%= submit_tag  t('general_listing.save'), class:"btn btn-primary search_submit orange_button", :disabled => true, id: "submit"  %>
+            </div>
+          <% end %>
+          </form>
+          <div class="other_links">
+            <p class="white_text">*<%= t('create_listing.required_file') %></p><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<%else%>
+  <div class="modal d_block " tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('general_listing.disconected') %></h5>
+          <button type="button" class="close to_home" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <%= link_to(t('header.login'), new_user_session_path, class: 'btn btn-primary  green_button')  %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script>
+    $( ".close.to_home" ).click(function() {
+        window.location.replace("<%= root_path %>");
+    });
+
+
+    var float= /^\s*(\d+((\.\d{2})|(\,\d{2})?)|(\.\d+))\s*$/;
+    var submit = $("#submit");
+    window.setInterval(function(){
+        var price = $("#price").val();
+        if (float.test(price)) {
+            submit.removeAttr('disabled');
+        }
+        else {
+            submit.attr('disabled','disabled');
+        }
+    }, 500);
+
+
+    $( "#price" ).change(function() {
+        var price = $("#price").val();
+        if (float.test(price)) {
+            submit.removeAttr('disabled');
+        }
+        else {
+            submit.attr('disabled','disabled');
+            $("#bug_price").addClass('d_block');
+        }
+    });
+
+    $( ".close" ).click(function() {
+        close_modal();
+    });
+    $( "#close" ).click(function() {
+        close_modal();
+    });
+
+</script>
+
+
+
