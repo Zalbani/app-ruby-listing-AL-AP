@@ -19,23 +19,33 @@ section:first-of-type{
     display: block;
 }
 
+.d_inlineb{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 4px;
+    vertical-align: top;
+}
+.hundred_width{
+    width: 100%;
+}
 /* Style shared */
 
 
 .green_button{
     border-radius: 0;
-    border: none;
     background-color: #00B871;
     transition: 0.3s;
+    border: 1px solid #00B871;
 }
 .green_button:hover, .green_button:focus, .green_button:active, .green_button:hover:active, .green_button:disabled, .green_button:hover:disabled, .green_button:not(:disabled):not(.disabled):active{
     color: #00B871;
     background-color: white;
+    border: 1px solid #00B871;
 }
 
 .orange_button{
     border-radius: 0;
-    border: none;
+    border: 1px solid #FF6D42;
     background-color: #FF6D42;
     transition: 0.3s;
 }
@@ -43,6 +53,7 @@ section:first-of-type{
 .orange_button:hover, .orange_button:focus, .orange_button:active, .orange_button:hover:active, .orange_button:disabled, .orange_button:hover:disabled, .orange_button:not(:disabled):not(.disabled):active{
     color: #FF6D42;
     background-color: white;
+    border: 1px solid #FF6D42;
 }
 
 .orange_text{
@@ -249,3 +260,68 @@ section.home>h1{
 .form_page.sign_up .other_links{
     bottom: 45px;
 }
+
+
+/* Listing Page Style */
+
+.listing_annonces{
+    height: auto;
+    margin: 5px 0 40px 0;
+    overflow: hidden;
+}
+.listing_annonces h2{
+    font-size: 45px;
+    font-family: Lato, sans-serif;
+}
+.listing_annonces .date{
+    color: #999999;
+    padding: 0 10px 0 0;
+    margin: 4px 0 20px 0;
+}
+.listing_annonces .category{
+    background-color: #2E2F30;
+    border-radius: 15px;
+    padding: 0 30px;
+    margin: 4px 10px 20px 10px;
+    color: white;
+}
+
+.annonce > img, .annonce > .blank_img{
+    max-height: 200px;
+    width: 200px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.desc_annonce{
+    width: calc(100% - 240px);
+    margin: 0 15px 40px 15px;
+    padding: 0 20px;
+    height: 200px;
+    position: relative;
+}
+.desc_annonce > p:first-of-type{
+    height: 150px;
+    width: 100%;
+    font-weight: unset;
+    font-size: 18px;
+}
+.desc_annonce > p{
+    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: bottom;
+    margin:0;
+    padding: 10px 0;
+}
+.desc_annonce > button{
+    position: absolute;
+    bottom: 8px;
+    padding: 8px 40px;
+    right: 20px;
+}
+.listing_annonces hr{
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+

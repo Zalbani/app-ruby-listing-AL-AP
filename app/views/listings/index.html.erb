@@ -1,26 +1,29 @@
 
 
-
+<section class="container">
 <% @announces.each do |post| %>
-    <section class="announces">
-      <a href="<%= listing_path(post.id) %>">
-        <h2><%= post.title %></h2>
-        <h2><%= post.price %></h2>
-        <h2><%= post.content %></h2>
-
-
-
+    <div class="row listing_annonces">
+      <h2 class="hundred_width"><%= post.title %></h2>
+        <p class="d_inlineb date">21-23-12</p>
         <% Category.all.each do |category|
           if category.id == post.category_id%>
-            <p><%= category.name %></p>
+          <p class="d_inlineb category"><%= category.name %></p>
+        <% end %>
+        <% end %>
+        <div class="annonce hundred_width d_block">
+          <% if post.picture.attached? %>
+            <%= image_tag post.picture, width: '100px', class: 'd_inlineb' %>
+          <% else %>
+          <div class="blank_img d_inlineb"></div>
           <% end %>
-        <% end %>
+          <div class="desc_annonce d_inlineb">
+            <p><%= post.content %></p>
+            <p>€<%= post.price %></p>
+            <button class="orange_button white_text">coucou</button>
+          </div>
+        </div>
+      <hr>
+    </div>
 
-
-        <% if post.picture.attached? %>
-          <%= image_tag post.picture, width: '100px' %>
-        <% end %>
-      </a>
-    </section>
-  </hr>
 <% end %>
+</section>
