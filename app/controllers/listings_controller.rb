@@ -1,7 +1,6 @@
 class ListingsController < ApplicationController
 
   def index
-
     @announces = Search.new(params[:query]).perform
   end
 
