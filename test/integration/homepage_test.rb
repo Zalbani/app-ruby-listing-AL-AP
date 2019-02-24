@@ -14,6 +14,7 @@ feature "Homepage" do
       assert_equal 200, last_response.status
     end
   end
+
   describe "Logged in" do
     before do
       sign_in users(:two)
