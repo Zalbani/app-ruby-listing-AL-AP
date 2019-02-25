@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-Role.create(name: 'user')
-Role.create(name: 'admin')
-User.create(first_name:"admin",last_name:"admin" ,email: 'admin@mail.com', password: 'password', password_confirmation: 'password') # TO-DO add : , roles_id: 2
-User.create(first_name:"user",last_name:"user" ,email: 'user@mail.com', password: 'password', password_confirmation: 'password')
+Role.create(name: 'user', id: 1)
+Role.create(name: 'admin', id: 2)
+User.create(first_name:"admin",last_name:"admin" ,email: 'admin@mail.com', password: 'password', password_confirmation: 'password',roles_id: 2)
+User.create(first_name:"user",last_name:"user" ,email: 'user@mail.com', password: 'password', password_confirmation: 'password', roles_id: 1)
