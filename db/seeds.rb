@@ -8,5 +8,5 @@
 #
 Role.create(name: 'user')
 Role.create(name: 'admin')
-User.create(email: 'admin@mail.com', password: 'password', password_confirmation: 'password') # TO-DO add : , roles_id: 2
-User.create(email: 'user@mail.com', password: 'password', password_confirmation: 'password')
+User.create(first_name:"admin",last_name:"admin" ,email: 'admin@mail.com', password: 'password', password_confirmation: 'password') # TO-DO add : , roles_id: 2
+User.create(first_name:"user",last_name:"user" ,email: 'user@mail.com', password: 'password', password_confirmation: 'password')
