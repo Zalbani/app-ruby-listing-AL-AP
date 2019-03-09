@@ -9,11 +9,11 @@
   </div>
   <div class="field">
     <%= f.label t('registration_new.first_name') %><br />
-    <%= f.text_field :FirstName, :required => true, autofocus: true, autocomplete: "first-name" %>
+    <%= f.text_field :first_name, :required => true, autofocus: true, autocomplete: "first-name" %>
   </div>
   <div class="field">
     <%= f.label t('registration_new.last_name') %><br />
-    <%= f.text_field :LastName, :required => true, autofocus: true, autocomplete: "last-name" %>
+    <%= f.text_field :last_name, :required => true, autofocus: true, autocomplete: "last-name" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
