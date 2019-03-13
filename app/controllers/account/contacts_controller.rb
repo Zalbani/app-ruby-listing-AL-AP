@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+class Account::ContactsController < ApplicationController
 
   def index
 

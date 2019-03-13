@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  # TO-DO link users and roles
-  # belongs_to :role
+  belongs_to :role
+  belongs_to :message
 
 
   # Include default devise modules. Others available are:
