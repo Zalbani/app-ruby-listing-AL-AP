@@ -17,6 +17,7 @@ en:
     email: "Email"
     password: "Password"
     forgot_password: "Forgot your password ?"
+    send: "Send"
   session_new:
     remember_me: "Remember me"
   session_link:
@@ -44,6 +45,12 @@ en:
     required_file: "Required field"
     price_bug: "Please enter a valid price"
     price_bug_desc: "Do not put space in the price and enter two digits after the decimal point"
+  search:
+    no_result: "We are sorry but there is no result for this research"
+    ther_is: "There is "
+    nb_results: " results for your research"
+    contact_seller: "Contact seller"
+    your_message: "Your message"
   activerecord:
     errors:
       models:

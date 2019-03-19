@@ -8,13 +8,13 @@
   </div>
   <div class="row">
     <% i = 0 %>
-    <% @announces.each do |post|
+    <% @announces.each do
       i = i + 1
     end %>
     <% if i == 0 %>
-      <h3 class="red_text"> Il n'y a aucun resulsultat pour votre recherche</h3>
+      <h3 class="red_text"> <%= t('search.no_result') %> </h3>
     <% else %>
-      <h3s> Il y a <%= i %> resultat(s) pour votre recherche</h3s>
+      <h3s> <%=  t('search.ther_is') %> <%= i %> <%= t('search.nb_results') %></h3s>
     <% end %>
   </div>
 </section>
@@ -40,7 +40,7 @@
           <div class="desc_annonce d_inlineb">
             <p><%= post.content %></p>
             <p>€<%= post.price %></p>
-            <button class="orange_button white_text">coucou</button>
+            <button class="orange_button white_text"><%=  t('search.contact_seller') %></button>
           </div>
         </div>
       <hr>
