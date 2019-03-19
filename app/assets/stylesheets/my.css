@@ -28,6 +28,8 @@ section:first-of-type{
 .hundred_width{
     width: 100%;
 }
+
+
 /* Style shared */
 
 
@@ -346,3 +348,22 @@ section.home>h1{
     width: 100%;
 }
 
+/* search page modification modal Style */
+
+.modal-header.for_contact, .modal-footer.for_contact, .modal-body.for_contact, .modal-header.for_contact .close{
+    color: white;
+}
+.modal-header.for_contact, .modal-footer.for_contact{
+    background-color: #465E6A;
+    color: white;
+    border: none;
+}
+.modal-body.for_contact{
+    background-color: #537282;
+}
+.modal-body.for_contact > textarea{
+    line-height: 1.4;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}

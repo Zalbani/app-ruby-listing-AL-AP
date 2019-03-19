@@ -51,6 +51,7 @@ en:
     nb_results: " results for your research"
     contact_seller: "Contact seller"
     your_message: "Your message"
+    your_message_here: "Enter your message here ..."
   activerecord:
     errors:
       models:

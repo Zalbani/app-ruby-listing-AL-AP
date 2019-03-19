@@ -51,6 +51,7 @@ fr:
     nb_results: " resultat(s) pour votre recherche"
     contact_seller: "Contacter le vendeur"
     your_message: "Votre message"
+    your_message_here: "Entrer votre message ici ..."
   activerecord:
     errors:
       models:
