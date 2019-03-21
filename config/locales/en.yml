@@ -44,6 +44,10 @@ en:
     required_file: "Required field"
     price_bug: "Please enter a valid price"
     price_bug_desc: "Do not put space in the price and enter two digits after the decimal point"
+  account:
+    my_contacts: "My contacts"
+    my_messages:  "My messages"
+    my_account: "My account"
   activerecord:
     errors:
       models:

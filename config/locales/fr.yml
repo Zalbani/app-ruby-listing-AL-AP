@@ -44,6 +44,10 @@ fr:
     required_file:  "Champs obligatoires"
     price_bug: "Veuillez entrer un prix valide"
     price_bug_desc: "Ne mettez pas d'espace dans le prix et entrer deux chiffres apres la virgule"
+  account:
+    my_contacts: "Mes contacts"
+    my_messages:  "Mes messages"
+    my_account: "Mon compte"
   activerecord:
     errors:
       models:

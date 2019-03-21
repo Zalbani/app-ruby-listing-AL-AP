@@ -18,10 +18,23 @@ section:first-of-type{
     opacity: 1;
     display: block;
 }
-
+.d_inlblock{
+    display: inline-block;
+}
 /* Style shared */
 
+.grey_button{
+    border-radius: 0;
+    border: 1px solid white;
+    background-color: #465E6A;
+    transition: 0.3s;
 
+}
+.grey_button:hover, .grey_button:focus, .grey_button:active, .grey_button:hover:active, .grey_button:disabled, .grey_button:hover:disabled, .grey_button:not(:disabled):not(.disabled):active{
+    color: #465E6A;
+    border: 1px solid #465E6A;
+    background-color: white;
+}
 .green_button{
     border-radius: 0;
     border: none;
@@ -249,3 +262,67 @@ section.home>h1{
 .form_page.sign_up .other_links{
     bottom: 45px;
 }
+
+
+/* Page Account Style*/
+
+.nav_account{
+    width: 90%;
+    margin: 20px auto;
+}
+.nav_account>p{
+    margin: 0 10px;
+}
+.border_hr{
+    border: 1px solid #465E6A;
+}
+
+.message_table>table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.message_table td, .message_table th
+{
+    /*border: 1px solid black;*/
+    padding: 10px;
+
+}
+
+.message_table th.image_t, .message_table td.image_t{
+    width: 10%;
+}
+.message_table th.price_t, .message_table td.price_t{
+    width: 10%;
+}
+.message_table th.date_t, .message_table td.date_t{
+    width: 30%;}
+.message_table th.message_t, .message_table td.message_t{
+    width: 50%;
+}
+.message_table tr{
+    background-color: #DADADA;
+    color: black;
+    border: 1px;
+}
+.message_table tr:first-of-type{
+    background-color: #465E6A;
+    color: white;
+}
+.message_table tr:nth-child(2n){
+    background-color: #EFEFEF;
+    color: black;
+}
+.message_table td.image_t>img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
