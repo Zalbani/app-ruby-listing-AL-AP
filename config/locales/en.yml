@@ -48,6 +48,10 @@ en:
     my_contacts: "My contacts"
     my_messages:  "My messages"
     my_account: "My account"
+    image: "Image"
+    price: "Price"
+    date: "Date"
+    message: "Message"
   activerecord:
     errors:
       models:
