@@ -1,53 +1,88 @@
-<section class="home">
+
+<section class="search_bar_top container">
+  <div class="row">
+    <%= form_tag root_path, method: :get do %>
+      <%= text_field_tag 'query', nil, placeholder: t('homepage.what_searching_for'), class: 'form-control search' %>
+      <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
+    <% end %>
+  </div>
+  <div class="row">
+    <% i = 0 %>
+    <% @announces.each do
+      i = i + 1
+    end %>
+    <% if i == 0 %>
+      <h3 class="red_text"> <%= t('search.no_result') %> </h3>
+    <% else %>
+      <h3s> <%=  t('search.ther_is') %> <%= i %> <%= t('search.nb_results') %></h3s>
+    <% end %>
+  </div>
+</section>
 
 
-<h1><%= t('homepage.you_re_going_to_find') %></h1>
 
-<div>
-  <%= form_tag root_path, method: :get do %>
-    <%= text_field_tag 'query', nil, placeholder: t('homepage.what_searching_for'), class: 'form-control search' %>
-    <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
-  <% end %>
-</div>
-  <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><%= t('homepage.created_listing') %></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+<section class="container">
+<% @announces.each do |post| %>
+    <div class="row listing_annonces">
+      <h2 class="hundred_width"><%= post.title %></h2>
+        <p class="d_inlineb date">21-23-12</p>
+        <% Category.all.each do |category|
+          if category.id == post.category_id%>
+          <p class="d_inlineb category"><%= category.name %></p>
+        <% end %>
+        <% end %>
+        <div class="annonce hundred_width d_block">
+          <% if post.picture.attached? %>
+            <%= image_tag post.picture, width: '100px', class: 'd_inlineb' %>
+          <% else %>
+          <div class="blank_img d_inlineb"></div>
+          <% end %>
+          <div class="desc_annonce d_inlineb">
+            <p><%= post.content %></p>
+            <p>€<%= post.price %></p>
+            <% if current_user.present? %>
+              <button class="orange_button white_text contact_seller" id="<%= post.id %>"><%=  t('search.contact_seller') %></button>
+            <% end %>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+      <hr>
+    </div>
+
+<!-- Contact seller modal -->
+    <% if current_user.present? %>
+    <div class="modal" tabindex="-1" role="dialog" id="<%= post.id %>">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header for_contact">
+            <h5 class="modal-title"><%= t('search.contact_seller') %></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="<%= post.id %>">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body for_contact">
+            <p><%= t('search.your_message') %></p>
+            <textarea placeholder="<%= t('search.your_message_here') %>"></textarea>
+          </div>
+          <div class="modal-footer for_contact">
+            <button type="button" class="btn btn-primary green_button" id="submit"><%= t('general_log.send') %></button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
-<% @announces.each do |post| %>
-    <section class="vanish">
-      <a href="<%= listing_path(post.id) %>">
-        <h2><%= post.title %></h2>
-        <% if post.picture.attached? %>
-          <%= image_tag post.picture, width: '100px' %>
-        <% end %>
-      </a>
-    </section>
+      <% end %>
 <% end %>
-</section>
 
+</section>
 <script>
     $( ".close" ).click(function() {
-        close_modal();
-    });
-    $( "#close" ).click(function() {
-        close_modal();
+        var id = $(this).attr('id');
+        close_modal_id(id);
     });
 
-    var params = $_GET();
-    if(params.created_annonce === 'true'){
-        $( ".modal" ).addClass('d_block');
-    }
+    $(".contact_seller").click(function () {
+        var id = $(this).attr('id');
+        open_modal(id);
+
+    })
+
 </script>

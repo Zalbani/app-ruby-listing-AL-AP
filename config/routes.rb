@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-
   localized do
     devise_for :users
 
-    root to: 'listings#index'
+    root 'welcome#index'
+
     resources :languages, only: :show
     resources :listings
 

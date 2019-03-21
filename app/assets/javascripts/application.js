@@ -30,3 +30,12 @@ function $_GET() {
 function close_modal() {
     $( ".modal.d_block" ).removeClass("d_block");
 }
+function close_modal_id(id) {
+    var string = "#"+ id +".modal.d_block";
+    $( string ).removeClass("d_block");
+}
+
+function open_modal(id) {
+    var string = "#"+ id +".modal";
+    $( string).addClass("d_block");
+}

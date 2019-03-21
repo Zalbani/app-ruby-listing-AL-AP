@@ -17,6 +17,7 @@ fr:
     email: "Email"
     password: "Mot de passe"
     forgot_password: "Mot de passe oublié ?"
+    send: "Envoye"
   session_new:
     remember_me: "Se souvenir de moi"
   session_link:
@@ -44,6 +45,13 @@ fr:
     required_file:  "Champs obligatoires"
     price_bug: "Veuillez entrer un prix valide"
     price_bug_desc: "Ne mettez pas d'espace dans le prix et entrer deux chiffres apres la virgule"
+  search:
+    no_result: "Nous sommes desole mais il n'y a aucun resultats pour votre recherche"
+    ther_is: "Il y a "
+    nb_results: " resultat(s) pour votre recherche"
+    contact_seller: "Contacter le vendeur"
+    your_message: "Votre message"
+    your_message_here: "Entrer votre message ici ..."
   activerecord:
     errors:
       models:
