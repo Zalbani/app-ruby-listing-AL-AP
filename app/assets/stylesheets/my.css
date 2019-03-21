@@ -22,7 +22,18 @@ section:first-of-type{
     display: inline-block;
 }
 /* Style shared */
+.white_button{
+    border-radius: 0;
+    background-color: white;
+    transition: 0.3s;
+    color: #465E6A;
+    border: none;
 
+}
+.white_button:hover, .white_button:focus, .white_button:active, .white_button:hover:active, .white_button:disabled, .white_button:hover:disabled, .white_button:not(:disabled):not(.disabled):active{
+    color: white;
+    background-color: #465E6A;
+}
 .grey_button{
     border-radius: 0;
     border: 1px solid white;

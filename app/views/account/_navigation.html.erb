@@ -1,6 +1,17 @@
 <section class="container-fluid nav_account">
-  <p class="d_inlblock"><%= link_to(t('account.my_contacts'), account_contacts_path, class: "btn btn-primary grey_button d_inlblock")%></p>
-  <p class="d_inlblock"><%= link_to(t('account.my_messages'), account_messages_path, class: "btn btn-primary d_inlblock grey_button")%></p>
+  <% if current_page?(account_contacts_path) %>
+    <p class="d_inlblock"><%= link_to(t('account.my_contacts'), account_contacts_path, class: "btn btn-primary grey_button d_inlblock")%></p>
+  <% else %>
+    <p class="d_inlblock"><%= link_to(t('account.my_contacts'), account_contacts_path, class: "btn btn-primary white_button d_inlblock")%></p>
+  <% end %>
+  <% if current_page?(account_messages_path) %>
+    <p class="d_inlblock"><%= link_to(t('account.my_messages'), account_messages_path, class: "btn btn-primary d_inlblock grey_button")%></p>
+  <% else %>
+    <p class="d_inlblock"><%= link_to(t('account.my_messages'), account_messages_path, class: "btn btn-primary d_inlblock white_button")%></p>
+  <% end %>
+
   <!-- <p><%= link_to(t('account.my_account'), account_contacts_path, class: "btn btn-primary grey_button d_inlblock")%></p> -->
   <hr class="border_hr">
+
+
 </section>
