@@ -40,13 +40,16 @@
           <div class="desc_annonce d_inlineb">
             <p><%= post.content %></p>
             <p>€<%= post.price %></p>
-            <button class="orange_button white_text contact_seller" id="<%= post.id %>"><%=  t('search.contact_seller') %></button>
+            <% if current_user.present? %>
+              <button class="orange_button white_text contact_seller" id="<%= post.id %>"><%=  t('search.contact_seller') %></button>
+            <% end %>
           </div>
         </div>
       <hr>
     </div>
 
 <!-- Contact seller modal -->
+    <% if current_user.present? %>
     <div class="modal" tabindex="-1" role="dialog" id="<%= post.id %>">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -66,6 +69,7 @@
         </div>
       </div>
     </div>
+      <% end %>
 <% end %>
 
 </section>
