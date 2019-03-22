@@ -291,3 +291,57 @@ section.home>h1{
 .form_page.sign_up .other_links{
     bottom: 45px;
 }
+
+/* Page Account Style*/
+
+.nav_account{
+    width: 90%;
+    margin: 20px auto;
+}
+.nav_account>p{
+    margin: 0 10px;
+}
+.border_hr{
+    border: 1px solid #465E6A;
+}
+
+.message_table>table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.message_table td, .message_table th
+{
+    /*border: 1px solid black;*/
+    padding: 10px;
+
+}
+
+.message_table th.image_t, .message_table td.image_t{
+    width: 10%;
+}
+.message_table th.price_t, .message_table td.price_t{
+    width: 10%;
+}
+.message_table th.date_t, .message_table td.date_t{
+    width: 30%;}
+.message_table th.message_t, .message_table td.message_t{
+    width: 50%;
+}
+.message_table tr{
+    background-color: #DADADA;
+    color: black;
+    border: 1px;
+}
+.message_table tr:first-of-type{
+    background-color: #465E6A;
+    color: white;
+}
+.message_table tr:nth-child(2n){
+    background-color: #EFEFEF;
+    color: black;
+}
+.message_table td.image_t>img{
+    width: 100%;
+    height: auto;
+}
