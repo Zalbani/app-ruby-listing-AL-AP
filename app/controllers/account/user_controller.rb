@@ -1,6 +1,6 @@
-class UserController < ApplicationController
+class Account::UserController < ApplicationController
 
-  def index
+  def edit
 
   end
 

@@ -38,7 +38,7 @@ en:
     price: "Price"
     save: "Save"
     error: "An error has occurred"
-    disconected: "You need to be logged in to access this page.You need to be logged in to access this page."
+    disconected: "You need to be logged in to access this page."
     close: "Close"
   create_listing:
     create_my_listing: "Create my listing"
@@ -52,6 +52,14 @@ en:
     contact_seller: "Contact seller"
     your_message: "Your message"
     your_message_here: "Enter your message here ..."
+  account:
+    my_contacts: "My contacts"
+    my_messages:  "My messages"
+    my_account: "My account"
+    image: "Image"
+    price: "Price"
+    date: "Date"
+    message: "Message"
   activerecord:
     errors:
       models:

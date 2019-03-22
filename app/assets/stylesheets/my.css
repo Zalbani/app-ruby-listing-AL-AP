@@ -30,9 +30,34 @@ section:first-of-type{
 }
 
 
+.d_inlblock{
+    display: inline-block;
+}
 /* Style shared */
+.white_button{
+    border-radius: 0;
+    background-color: white;
+    transition: 0.3s;
+    color: #465E6A;
+    border: none;
 
+}
+.white_button:hover, .white_button:focus, .white_button:active, .white_button:hover:active, .white_button:disabled, .white_button:hover:disabled, .white_button:not(:disabled):not(.disabled):active{
+    color: white;
+    background-color: #465E6A;
+}
+.grey_button{
+    border-radius: 0;
+    border: 1px solid white;
+    background-color: #465E6A;
+    transition: 0.3s;
 
+}
+.grey_button:hover, .grey_button:focus, .grey_button:active, .grey_button:hover:active, .grey_button:disabled, .grey_button:hover:disabled, .grey_button:not(:disabled):not(.disabled):active{
+    color: #465E6A;
+    border: 1px solid #465E6A;
+    background-color: white;
+}
 .green_button{
     border-radius: 0;
     background-color: #00B871;
@@ -265,105 +290,4 @@ section.home>h1{
 
 .form_page.sign_up .other_links{
     bottom: 45px;
-}
-
-
-/* Listing Page Style */
-
-
-.search_bar_top form{
-    width:100%;
-    margin: 40px 0;
-}
-.search_bar_top form > input.search{
-    display: inline-block;
-    width: 88%;
-
-}.search_bar_top form > input.search_submit{
-     display: inline-block;
-     width: 10%;
-     margin: 0;
-     height: 100%;
-}
-
-
-.listing_annonces{
-    height: auto;
-    margin: 5px 0 40px 0;
-    overflow: hidden;
-}
-.listing_annonces h2{
-    font-size: 45px;
-    font-family: Lato, sans-serif;
-}
-.listing_annonces .date{
-    color: #999999;
-    padding: 0 10px 0 0;
-    margin: 4px 0 20px 0;
-}
-.listing_annonces .category{
-    background-color: #2E2F30;
-    border-radius: 15px;
-    padding: 0 30px;
-    margin: 4px 10px 20px 10px;
-    color: white;
-}
-
-.annonce > img, .annonce > .blank_img{
-    max-height: 200px;
-    width: 200px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.desc_annonce{
-    width: calc(100% - 240px);
-    margin: 0 15px 40px 15px;
-    padding: 0 20px;
-    height: 200px;
-    position: relative;
-}
-.desc_annonce > p:first-of-type{
-    height: 150px;
-    width: 100%;
-    font-weight: unset;
-    font-size: 18px;
-}
-.desc_annonce > p{
-    width: 40%;
-    font-size: 20px;
-    font-weight: bold;
-    vertical-align: bottom;
-    margin:0;
-    padding: 10px 0;
-}
-.desc_annonce > button{
-    position: absolute;
-    bottom: 8px;
-    padding: 8px 40px;
-    right: 20px;
-}
-.listing_annonces hr{
-    margin: 0 0 10px 0;
-    width: 100%;
-}
-
-/* search page modification modal Style */
-
-.modal-header.for_contact, .modal-footer.for_contact, .modal-body.for_contact, .modal-header.for_contact .close{
-    color: white;
-}
-.modal-header.for_contact, .modal-footer.for_contact{
-    background-color: #465E6A;
-    color: white;
-    border: none;
-}
-.modal-body.for_contact{
-    background-color: #537282;
-}
-.modal-body.for_contact > textarea{
-    line-height: 1.4;
-    width: 100%;
-    height: 150px;
-    padding: 10px;
 }

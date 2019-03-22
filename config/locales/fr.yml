@@ -52,6 +52,14 @@ fr:
     contact_seller: "Contacter le vendeur"
     your_message: "Votre message"
     your_message_here: "Entrer votre message ici ..."
+  account:
+    my_contacts: "Mes contacts"
+    my_messages:  "Mes messages"
+    my_account: "Mon compte"
+    image: "Image"
+    price: "Prix"
+    date: "Date"
+    message: "Message"
   activerecord:
     errors:
       models:
