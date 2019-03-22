@@ -4,7 +4,7 @@
   <h1><%= t('homepage.you_re_going_to_find') %></h1>
 
   <div>
-    <%= form_tag root_path, method: :get do %>
+    <%= form_tag listings_path, method: :get do %>
       <%= text_field_tag 'query', nil, placeholder: t('homepage.what_searching_for'), class: 'form-control search' %>
       <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
     <% end %>
@@ -33,13 +33,4 @@
     $( "#close" ).click(function() {
         close_modal();
     });
-
-    var params = $_GET();
-    if(params.created_annonce === 'true'){
-        $( ".modal" ).addClass('d_block');
-    }
-    if (params['query'] != null || params['query'] != undefined){
-      string_query = "?utf8=" + params['utf8'] + "&query=" + params['query']+"&commit="+params['commit'];
-      document.location.href="/listings"+string_query
-    }
 </script>

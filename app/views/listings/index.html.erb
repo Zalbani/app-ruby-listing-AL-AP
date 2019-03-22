@@ -1,7 +1,7 @@
 
 <section class="search_bar_top container">
   <div class="row">
-    <%= form_tag root_path, method: :get do %>
+    <%= form_tag listings_path, method: :get do %>
       <%= text_field_tag 'query', nil, placeholder: t('homepage.what_searching_for'), class: 'form-control search' %>
       <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
     <% end %>
@@ -84,5 +84,4 @@
         open_modal(id);
 
     })
-
 </script>
