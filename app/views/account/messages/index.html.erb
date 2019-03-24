@@ -8,36 +8,15 @@
       <th class="date_t"><%= t('account.date') %></th>
       <th class="message_t"><%= t('account.message') %></th>
     </tr>
+
+    <% @messages.each do |message| %>
     <tr>
-      <td class="image_t"><img src="https://www.w3schools.com/html/pic_trulli.jpg"></td>
-      <td class="price_t">33 ans</td>
-      <td class="date_t">Espagne</td>
-      <td class="message_t">Lorem</td>
+      <td class="image_t"><%= image_tag message.annonce.picture %></td>
+      <td class="price_t"><%= message.annonce.price %></td>
+      <td class="date_t"><%= localize(message.created_at , :format => :sample) %></td>
+      <td class="message_t"><%= message.message %></td>
     </tr>
-    <tr>
-      <td class="image_t"><img src="https://www.w3schools.com/html/pic_trulli.jpg"></td>
-      <td class="price_t">26 ans</td>
-      <td class="date_t">États-Unis</td>
-      <td class="message_t">Lorem</td>
-    </tr>
-    <tr>
-      <td class="image_t"><img src="https://www.w3schools.com/html/pic_trulli.jpg"></td>
-      <td class="price_t">26 ans</td>
-      <td class="date_t">États-Unis</td>
-      <td class="message_t">Lorem</td>
-    </tr>
-    <tr>
-      <td class="image_t"><img src="https://www.w3schools.com/html/pic_trulli.jpg"></td>
-      <td class="price_t">26 ans</td>
-      <td class="date_t">États-Unis</td>
-      <td class="message_t">Lorem</td>
-    </tr>
-    <tr>
-      <td class="image_t"><img src="https://www.w3schools.com/html/pic_trulli.jpg"></td>
-      <td class="price_t">26 ans</td>
-      <td class="date_t">États-Unis</td>
-      <td class="message_t">Lorem</td>
-    </tr>
+    <% end %>
   </table>
 </section>
 <h1>La je suis dans MESSAGES ENVOYE</h1>

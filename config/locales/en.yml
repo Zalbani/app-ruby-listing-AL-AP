@@ -60,6 +60,9 @@ en:
     price: "Price"
     date: "Date"
     message: "Message"
+  time:
+    formats:
+      sample: '%d.%m.%Y'
   activerecord:
     errors:
       models:

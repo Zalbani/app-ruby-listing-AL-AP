@@ -25,7 +25,7 @@
 <% @announces.each do |post| %>
     <div class="row listing_annonces">
       <h2 class="hundred_width"><%= post.title %></h2>
-        <p class="d_inlineb date">21-23-12</p>
+        <p class="d_inlineb date"><%= localize(post.created_at , :format => :sample) %></p>
         <% Category.all.each do |category|
           if category.id == post.category_id%>
           <p class="d_inlineb category"><%= category.name %></p>
