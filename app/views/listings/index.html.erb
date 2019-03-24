@@ -59,34 +59,19 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-
-
           <%= form_tag account_messages_path, method: :post, multipart: true do %>
           <div class="modal-body for_contact">
-
-
-
               <label><%= t('search.your_message') %></label><br/>
               <%= text_area_tag 'message[message]', @message_new.message, :required => true, placeholder: t('search.your_message_here') %>
-
-              <div class="vanish">
-                <label>Id annonce</label>
-                <%= text_field_tag 'message[annonce_id]', @message_new.annonce_id, :required => true, :value => post.id%>
+             <div class=" vanish ">
+                <%= text_field_tag 'message[annonce_id]', @message_new.annonce_id , :required => true, :value => post.id%>
               </div>
-              <div class="actions">
-
-              </div>
-
-
           </div>
           <div class="modal-footer for_contact">
             <%= submit_tag  t('general_log.send'), class:"btn btn-primary green_button", id: "submit"  %>
           </div>
-
-
           <% end %>
           </form>
-
         </div>
       </div>
     </div>
@@ -97,12 +82,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title"><%= t('homepage.not_created_message') %></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary orange_button" id="close-1" data-dismiss="modal"><%= t('general_listing.close') %></button>
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
         </div>
       </div>
     </div>
@@ -118,6 +103,14 @@
         var id = $(this).attr('id');
         open_modal(id);
 
+    });
+
+    $( ".close.standard" ).click(function() {
+        close_modal();
+    });
+
+    $( "#close" ).click(function() {
+        close_modal();
     });
 
 
