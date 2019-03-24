@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'account/user', action: :edit, controller: 'devise/registrations'
 
     namespace :account do
+      resource :messages, only: [:idnex, :create]
       get 'contacts', action: :index, controller: 'contacts'
       get 'messages', action: :index, controller: 'messages'
     end
