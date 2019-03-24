@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :role
-  belongs_to :message
 
 
   # Include default devise modules. Others available are:
