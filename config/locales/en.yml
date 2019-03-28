@@ -10,6 +10,8 @@ en:
     you_re_going_to_find: "You're going to find !"
     what_searching_for: "What are you searching for ?"
     created_listing: "Your listing has been created!"
+    created_message: "Your message has been created!"
+    not_created_message: "your message has not been sent !"
   general_log:
     log_in: "Log in"
     login: "Login"
@@ -56,6 +58,7 @@ en:
     my_contacts: "My contacts"
     my_messages:  "My messages"
     my_account: "My account"
+    my_profile: "My profile"
     image: "Image"
     price: "Price"
     date: "Date"

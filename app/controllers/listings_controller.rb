@@ -2,6 +2,8 @@ class ListingsController < ApplicationController
 
   def index
     @announces = Search.new(params[:query]).perform
+
+    @message_new = Message.new
   end
 
   def new
@@ -11,7 +13,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Annonce.new(listings_params)
     if @listing.save
-      redirect_to controller: 'listings', created_annonce: 'true'
+      redirect_to controller: '/welcome' , created_annonce: 'true'
     else
       render template: '/listings/new'
     end
@@ -28,5 +30,4 @@ class ListingsController < ApplicationController
         :picture,
         ).merge(user_id: current_user.id)
   end
-
 end

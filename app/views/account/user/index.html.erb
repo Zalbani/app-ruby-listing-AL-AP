@@ -1,23 +1,5 @@
 <% if current_user.present? %>
   <%= render partial: 'account/navigation' %>
-  <section class="message_table container">
-    <table>
-      <tr>
-        <th class="image_t"><%= t('account.image') %></th>
-        <th class="price_t"><%= t('account.price') %></th>
-        <th class="date_t"><%= t('account.date') %></th>
-        <th class="message_t"><%= t('account.message') %></th>
-      </tr>
-      <% @messages.each do |message| %>
-        <tr>
-          <td class="image_t"><%= image_tag message.annonce.picture %></td>
-          <td class="price_t"><%= message.annonce.price %></td>
-          <td class="date_t"><%= localize(message.created_at , :format => :sample) %></td>
-          <td class="message_t"><%= message.message %></td>
-        </tr>
-      <% end %>
-    </table>
-  </section>
 <%else%>
   <div class="modal d_block " tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">

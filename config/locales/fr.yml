@@ -10,6 +10,8 @@ fr:
     you_re_going_to_find: "Vous allez trouver !"
     what_searching_for: "Qu'est-ce que vous recherchez ?"
     created_listing: "Votre annonce a bien ete cree !"
+    created_message: "Votre message a bien ete envoyee !"
+    not_created_message: "Votre message n'a pas ete envoyee !"
   general_log:
     log_in: "Se connecter"
     login: "Connection"
@@ -56,6 +58,7 @@ fr:
     my_contacts: "Mes contacts"
     my_messages:  "Mes messages"
     my_account: "Mon compte"
+    my_profile: "Mon profil"
     image: "Image"
     price: "Prix"
     date: "Date"
