@@ -1,0 +1,28 @@
+<header>
+  <h4><%= link_to 'Listing', root_path, class: "title"%></h4>
+  <!-- Login / LogOut option-->
+  <% if user_signed_in? %>
+    <p class="bouton_log out">
+      <%= link_to(t('header.logout'), destroy_user_session_path, method: :delete) %>
+    </p>
+    <p class="bouton_log">
+      <%= link_to(t('account.my_account'), account_contacts_path) %>
+    </p>
+    <% if current_user.roles_id == 2 %>
+      <p class="bouton_log">
+        <%= link_to(t('header.admin'), rails_admin_path) %>
+      </p>
+    <% end %>
+  <% else %>
+    <p class="bouton_log in">
+      <%= link_to(t('header.login'), new_user_session_path)  %>
+    </p>
+  <% end %>
+  <label class="the_selector">
+    <select data-do="select_language" class="form-control language">
+      <option value="en" <%= "selected" if session[:language] == 'en' %>>En</option>
+      <option value="fr" <%= "selected" if session[:language] == 'fr' %>>Fr</option>
+    </select>
+  </label>
+  <h4><%= link_to(t('header.create_listing'), new_listing_path, class: "btn btn-primary green_button")%></h4>
+</header>

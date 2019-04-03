@@ -1,0 +1,11 @@
+<h1>Coucou nous sommes dans le show.html</h1>
+
+
+<h2>Title : <%= @announce.title %></h2>
+<i>Content : <%= @announce.content %></i>
+<p>Ecrit par :<%= @announce.user.name %></p>
+<p>Category :<%= @announce.category.name %></p>
+<p>Price :<%= @announce.price %></p>
+<% if @announce.picture.attached? %>
+  <%= image_tag @announce.picture, width: '100px' %>
+<% end %>

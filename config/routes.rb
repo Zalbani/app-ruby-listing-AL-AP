@@ -3,15 +3,24 @@ Rails.application.routes.draw do
   localized do
     devise_for :users
 
-    root to: 'annonces#index'
-    resources :annonces
-    #resources :currencies, only: :show
+    root 'welcome#index'
 
-    namespace :admin do
-      root to: 'dashboard#index'
-      resources :posts
+    resources :languages, only: :show
+    resources :listings
+
+    get 'listings', action: :index, controller: 'listings'
+
+    # get 'account/user', action: :edit, controller: 'devise/registrations'
+
+    namespace :account do
+      resource :messages, only: [:index, :create]
+      get 'contacts', action: :index, controller: 'contacts'
+      get 'messages', action: :index, controller: 'messages'
+      get 'user', action: :index, controller: 'user'
     end
+
   end
+
   # TO-DO bug with /admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

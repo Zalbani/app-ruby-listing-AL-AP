@@ -1,0 +1,66 @@
+<section class="home">
+
+
+  <h1><%= t('homepage.you_re_going_to_find') %></h1>
+
+  <div>
+    <%= form_tag listings_path, method: :get do %>
+      <%= text_field_tag 'query', nil, placeholder: t('homepage.what_searching_for'), class: 'form-control search' %>
+      <%= submit_tag t('homepage.search'), class: 'btn btn-primary search_submit green_button' %>
+    <% end %>
+  </div>
+  <div class="modal annonce" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('homepage.created_listing') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal message" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('homepage.created_message') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close-1" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<script>
+    $( ".close" ).click(function() {
+        close_modal();
+    });
+
+    $( "#close" ).click(function() {
+        close_modal();
+    });
+    $( "#close-1" ).click(function() {
+        close_modal();
+    });
+
+
+    var params = $_GET();
+
+    if(params.created_annonce === 'true'){
+        $( ".modal.annonce" ).addClass('d_block');
+    }
+    if(params.created_message === 'true'){
+        $( ".modal.message" ).addClass('d_block');
+    }
+
+</script>

@@ -1,17 +1,82 @@
 en:
-  title: "Title"
-  content: "Content"
-  tags: "Tags"
-  image: "Image"
-  category: "Category"
-  hello: "Hello world"
+  test: "Je suis en Anglais"
+  header:
+    logout: "Logout"
+    login: "Login"
+    create_listing: "Create my listing"
+    dashboard: "Dashboard"
   homepage:
     search: "Search"
+    you_re_going_to_find: "You're going to find !"
+    what_searching_for: "What are you searching for ?"
+    created_listing: "Your listing has been created!"
+    created_message: "Your message has been created!"
+    not_created_message: "your message has not been sent !"
+  general_log:
+    log_in: "Log in"
+    login: "Login"
+    sign_up: "Sign up"
+    email: "Email"
+    password: "Password"
+    forgot_password: "Forgot your password ?"
+    send: "Send"
+  session_new:
+    remember_me: "Remember me"
+  session_link:
+    didnt_receive_confir_intruct: "Didn't receive confirmation instructions ?"
+    didnt_receive_unlock_intruct: "Didn't receive unlock instructions ?"
+  registration_new:
+    first_name: "First name"
+    last_name: "Last name"
+    password_confirmation: "Password confirmation"
+    character_min: "characters minimum"
+  reset_pass:
+    send_pass_instruct: "Send me reset password instructions"
+  general_listing:
+    title: "Title"
+    description: "Description"
+    category: "Category"
+    picture: "Picture"
+    price: "Price"
+    save: "Save"
+    error: "An error has occurred"
+    disconected: "You need to be logged in to access this page."
+    close: "Close"
+  create_listing:
+    create_my_listing: "Create my listing"
+    required_file: "Required field"
+    price_bug: "Please enter a valid price"
+    price_bug_desc: "Do not put space in the price and enter two digits after the decimal point"
+  search:
+    no_result: "We are sorry but there is no result for this research"
+    ther_is: "There is "
+    nb_results: " results for your research"
+    contact_seller: "Contact seller"
+    your_message: "Your message"
+    your_message_here: "Enter your message here ..."
+  account:
+    my_contacts: "My contacts"
+    my_messages:  "My messages"
+    my_account: "My account"
+    my_profile: "My profile"
+    image: "Image"
+    price: "Price"
+    date: "Date"
+    message: "Message"
+  time:
+    formats:
+      sample: '%d.%m.%Y'
   activerecord:
     errors:
       models:
-        post:
+        annonce:
           attributes:
+            content:
+              blank: "The description field cannot be empty"
+            price:
+              blank: "The price field cannot be empty"
             title:
-              blank: "Title can't be blank"
+              blank: "The title field cannot be empty"
+
+
 

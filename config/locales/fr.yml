@@ -1,32 +1,79 @@
 fr:
-  search: "Rechercher"
-  title: "Titre"
-  content: "Contenu"
-  tags: "Tags"
-  image: "Image"
-  category: "Catégorie"
-  hello: "Hello world"
+  test: "Je suis en Francais"
+  header:
+    logout: "Déconnexion"
+    login: "Connexion"
+    create_listing: "Cree mon annonce"
+    dashboard: "Tableau de bord"
   homepage:
     search: "Rechercher"
-  date:
-    day_names:
-    - "Lundi"
-    - "Mardi"
-    - "Mercredi"
-    - "Jeudi"
-    - "Vendredi"
-    - "Samedi"
-    - "Dimanche"
-
+    you_re_going_to_find: "Vous allez trouver !"
+    what_searching_for: "Qu'est-ce que vous recherchez ?"
+    created_listing: "Votre annonce a bien ete cree !"
+    created_message: "Votre message a bien ete envoyee !"
+    not_created_message: "Votre message n'a pas ete envoyee !"
+  general_log:
+    log_in: "Se connecter"
+    login: "Connection"
+    sign_up: "S'inscrire"
+    email: "Email"
+    password: "Mot de passe"
+    forgot_password: "Mot de passe oublié ?"
+    send: "Envoye"
+  session_new:
+    remember_me: "Se souvenir de moi"
+  session_link:
+    didnt_receive_confir_intruct: "Vous n'avez pas reçu d'instructions de confirmation ?"
+    didnt_receive_unlock_intruct: "Vous n'avez pas reçu d'instructions de déverrouillage ?"
+  registration_new:
+    first_name: "Prénom"
+    last_name: "Nom"
+    password_confirmation: "Confirmer le mot de passe"
+    character_min: "caractères minimum"
+  reset_pass:
+    send_pass_instruct: "Envoyez la réinitialisation du mot de passe"
+  general_listing:
+    title: "Titre"
+    description: "Description"
+    category: "Catégorie"
+    picture: "Image"
+    price: "Prix"
+    save: "Sauvegarder"
+    error: "Une erreur est survenue !"
+    disconected: "Vous avez besoin d'etre connecte pour pouvoir accéder a cette page."
+    close: "Fermer"
+  create_listing:
+    create_my_listing: "Cree mon annonce"
+    required_file:  "Champs obligatoires"
+    price_bug: "Veuillez entrer un prix valide"
+    price_bug_desc: "Ne mettez pas d'espace dans le prix et entrer deux chiffres apres la virgule"
+  search:
+    no_result: "Nous sommes desole mais il n'y a aucun resultats pour votre recherche"
+    ther_is: "Il y a "
+    nb_results: " resultat(s) pour votre recherche"
+    contact_seller: "Contacter le vendeur"
+    your_message: "Votre message"
+    your_message_here: "Entrer votre message ici ..."
+  account:
+    my_contacts: "Mes contacts"
+    my_messages:  "Mes messages"
+    my_account: "Mon compte"
+    my_profile: "Mon profil"
+    image: "Image"
+    price: "Prix"
+    date: "Date"
+    message: "Message"
   time:
     formats:
-      default: "%A %m %Y à %H:%M"
-      short: "%d %m"
+      sample: '%d.%m.%Y'
   activerecord:
     errors:
       models:
-        post:
+        annonce:
           attributes:
+            content:
+              blank: "Le champ description ne peux pas etre vide"
+            price:
+              blank: "Le champ prix ne peux pas etre vide"
             title:
-              blank: "Le titre doit être saisi"
-
+              blank: "Le champ titre ne peux pas etre vide"

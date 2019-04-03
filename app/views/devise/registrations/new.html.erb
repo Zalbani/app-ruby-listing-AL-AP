@@ -1,0 +1,44 @@
+<section class="container form_page sign_up">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1><%= t('general_log.sign_up') %></h1>
+      <div class="grey_bg">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+         <div class="field large">
+            <%= f.label t('general_log.email') %><br />
+            <%= f.email_field :email, :required => true, autofocus: true, autocomplete: "email" %>
+          </div>
+          <div class="field large">
+            <%= f.label t('registration_new.first_name') %><br />
+            <%= f.text_field :first_name,:required => true, autocomplete: "first-name" %>
+          </div>
+          <div class="field large">
+            <%= f.label t('registration_new.last_name') %><br />
+            <%= f.text_field :last_name,:required => true, autocomplete: "last-name" %>
+          </div>
+          <div class="field large">
+            <%= f.label t('general_log.password') %>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> <%= t('registration_new.character_min') %>)</em>
+            <% end %><br />
+            <%= f.password_field :password,:required => true, autocomplete: "new-password" %>
+          </div>
+
+          <div class="field large">
+            <%= f.label t('registration_new.password_confirmation') %><br />
+            <%= f.password_field :password_confirmation, :required => true, autocomplete: "new-password" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit t('general_log.sign_up'), class: 'btn btn-primary search_submit orange_button' %>
+          </div>
+        <% end %>
+        <div class="other_links">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 class Annonce < ApplicationRecord
   belongs_to :category
   belongs_to :user
+  has_many :message
   has_one_attached :picture
 
   validates :category_id,presence: true

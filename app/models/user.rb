@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # TO-DO link users and roles
-  # belongs_to :role
 
 
   # Include default devise modules. Others available are:
@@ -8,5 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  belongs_to :role
+
+  validates :roles_id,presence: true
 
 end
