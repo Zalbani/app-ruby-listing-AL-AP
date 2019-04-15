@@ -3,9 +3,17 @@
 # This model initially had no columns defined. If you add columns to the
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
-#
-user:
-  name: 'user'
 
-admin:
-  name: 'admin'
+velo:
+  user: :userAdmin
+  category: :vehicule
+  title: "Vélo"
+  content: "Superbe velo, presque neuf"
+  price : "1000"
+
+lapin:
+  user: :userUser
+  category: :loisir
+  title: "Lapin"
+  content: "Lapin bg"
+  price: "103"
