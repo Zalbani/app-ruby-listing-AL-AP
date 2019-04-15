@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :languages, only: :show
     resources :listings
 
+
     get 'listings', action: :index, controller: 'listings'
 
     # get 'account/user', action: :edit, controller: 'devise/registrations'
@@ -21,6 +22,5 @@ Rails.application.routes.draw do
 
   end
 
-  # TO-DO bug with /admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end
