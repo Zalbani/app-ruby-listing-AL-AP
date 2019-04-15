@@ -7,7 +7,12 @@ class Account::UserController < ApplicationController
   def create
     @user = current_user
     current_user.update(user_params)
-    redirect_to account_user_index_path
+    if @user.save
+      redirect_to controller: '/account/user', updated_account: 'true'
+    else
+      redirect_to controller: '/account/user', updated_account: 'false'
+    end
+
   end
 
   private
