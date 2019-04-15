@@ -63,6 +63,12 @@ fr:
     price: "Prix"
     date: "Date"
     message: "Message"
+    new_password: "Nouveau mots de passe"
+    new_password_confirmation: "Confirmation nouveau mots de passe"
+    update: "Mettre a jour"
+    updated_password: "Votre mots de passe a ete mis a jour ! Vous devez maintenant vous reconnecter !"
+    updated_account: "Votre compte a ete mis a jour !"
+    update_error: "Votre compte n'a pas ete mis a jour !"
   time:
     formats:
       sample: '%d.%m.%Y'

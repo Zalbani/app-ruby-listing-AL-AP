@@ -63,6 +63,12 @@ en:
     price: "Price"
     date: "Date"
     message: "Message"
+    new_password: "New password"
+    new_password_confirmation: "Confirm your new password"
+    update: "Update"
+    updated_password: "Your password has been updated! You must now log in again!"
+    updated_account: "Your accounts have been updated!"
+    update_error: "Your account has not been updated!"
   time:
     formats:
       sample: '%d.%m.%Y'

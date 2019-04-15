@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Votre compte n'a pas ete modifier</h5>
+        <h5 class="modal-title"><%= t('account.update_error') %></h5>
         <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -18,7 +18,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Vous avez bien modifier vos infos</h5>
+          <h5 class="modal-title"><%= t('account.updated_account') %></h5>
           <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -36,22 +36,22 @@
       <%= form_tag account_user_index_path, method: :post, class: 'form grey_bg' do %>
 
         <div class="field large">
-          <label>Email</label>
+          <label><%= t('general_log.email') %></label>
           <%= email_field_tag 'user[email]',@user.email, :required => true%>
         </div>
 
         <div class="field large">
-          <label>First name</label>
+          <label><%= t('registration_new.first_name') %></label>
           <%= text_field_tag 'user[first_name]',@user.first_name, :required => true%>
         </div>
 
         <div class="field large">
-          <label>Last name</label>
+          <label><%= t('registration_new.last_name') %></label>
           <%= text_field_tag 'user[last_name]',@user.last_name, :required => true%>
         </div>
 
         <div class="actions">
-          <%= submit_tag "Update", class:"btn btn-primary orange_button" %>
+          <%= submit_tag t('account.update'), class:"btn btn-primary orange_button" %>
         </div>
       <% end %>
     </div>
@@ -59,17 +59,17 @@
         <%= form_tag account_user_index_path, method: :post, class: 'form grey_bg' do %>
 
           <div class="field large">
-            <label>New password</label>
+            <label><%= t('account.new_password') %></label>
             <%= password_field_tag 'user[password]',"", :required => true%>
           </div>
 
           <div class="field large">
-            <label>Retype new password</label>
+            <label><%= t('account.new_password_confirmation') %></label>
             <%= password_field_tag 'user[password_confirmation]',"", :required => true%>
           </div>
 
           <div class="actions">
-            <%= submit_tag "Update", class:"btn btn-primary orange_button" %>
+            <%= submit_tag t('account.update'), class:"btn btn-primary orange_button" %>
           </div>
         <% end %>
       </div>
@@ -81,7 +81,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Votre mots de passe a ete modifier veuillez vous identifier</h5>
+          <h5 class="modal-title"><%= t('account.updated_password') %></h5>
         </div>
         <%= link_to(t('header.login'), new_user_session_path, class: 'btn btn-primary  green_button')  %>
       </div>
