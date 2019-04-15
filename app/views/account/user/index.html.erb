@@ -1,4 +1,34 @@
+<div class="modal update_false" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Votre compte n'a pas ete modifier</h5>
+        <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary orange_button" id="close-2" data-dismiss="modal"><%= t('general_listing.close') %></button>
+      </div>
+    </div>
+  </div>
+</div>
 <% if current_user.present? %>
+  <div class="modal update_true" tabindex="0" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Vous avez bien modifier vos infos</h5>
+          <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <%= render partial: 'account/navigation' %>
   <section class="container form_page">
   <div class="row">
@@ -46,6 +76,33 @@
   </div>
   </section>
 <%else%>
+
+  <div class="modal update_true" tabindex="0" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Votre mots de passe a ete modifier veuillez vous identifier</h5>
+        </div>
+        <%= link_to(t('header.login'), new_user_session_path, class: 'btn btn-primary  green_button')  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal message" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('homepage.not_created_message') %></h5>
+          <button type="button" class="close standard" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary orange_button" id="close" data-dismiss="modal"><%= t('general_listing.close') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal d_block " tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -65,4 +122,29 @@
     $( ".close.to_home" ).click(function() {
         window.location.replace("<%= root_path %>");
     });
+
+    $( ".close.standard" ).click(function() {
+        close_modal();
+    });
+
+    $( "#close" ).click(function() {
+        close_modal();
+    });
+
+    $( "#close-2" ).click(function() {
+        close_modal();
+    });
+
+
+    var params = $_GET();
+
+    if(params.updated_account === 'false'){
+        $( ".modal.update_false" ).addClass('d_block');
+    }else{
+        if(params.updated_account === 'true'){
+            $( ".modal.d_block" ).removeClass('d_block');
+            $( ".modal.update_true" ).addClass('d_block');
+
+        }
+    }
 </script>

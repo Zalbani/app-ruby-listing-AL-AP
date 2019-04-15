@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
     namespace :account do
       resources :messages, only: [:index, :create]
-      get 'contacts', action: :index, controller: 'contacts'
+      resources :'contacts', only: [:index]
       resources :'user', only: [:index, :create]
     end
 
