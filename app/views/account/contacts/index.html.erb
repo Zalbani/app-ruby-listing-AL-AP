@@ -10,7 +10,11 @@
       </tr>
       <% @messages.each do |message| %>
         <tr>
-          <td class="image_t"><%= image_tag message.annonce.picture %></td>
+          <td class="image_t">
+            <% if message.annonce.picture.attached? %>
+              <%= image_tag message.annonce.picture %>
+            <% end %>
+          </td>
           <td class="price_t"><%= message.annonce.price %></td>
           <td class="date_t"><%= localize(message.created_at , :format => :sample) %></td>
           <td class="message_t"><%= message.message %></td>

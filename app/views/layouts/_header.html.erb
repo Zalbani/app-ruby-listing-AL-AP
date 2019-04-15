@@ -8,7 +8,7 @@
     <p class="bouton_log">
       <%= link_to(t('account.my_account'), account_contacts_path) %>
     </p>
-    <% if current_user.roles_id == 2 %>
+    <% if current_user.role.name == "admin" %>
       <p class="bouton_log">
         <%= link_to(t('header.admin'), rails_admin_path) %>
       </p>

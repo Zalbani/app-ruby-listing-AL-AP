@@ -14,10 +14,9 @@ Rails.application.routes.draw do
     # get 'account/user', action: :edit, controller: 'devise/registrations'
 
     namespace :account do
-      resource :messages, only: [:index, :create]
-      get 'contacts', action: :index, controller: 'contacts'
-      get 'messages', action: :index, controller: 'messages'
-      get 'user', action: :index, controller: 'user'
+      resources :messages, only: [:index, :create]
+      resources :'contacts', only: [:index]
+      resources :'user', only: [:index, :create]
     end
 
   end

@@ -17,7 +17,7 @@ feature "Homepage" do
 
   describe "Logged in" do
     before do
-      sign_in users(:two)
+      sign_in users(:userUser)
     end
     it "responds 200 when I'm logged" do
       get  listings_url#create
