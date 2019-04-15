@@ -1,5 +1,50 @@
 <% if current_user.present? %>
   <%= render partial: 'account/navigation' %>
+  <section class="container form_page">
+  <div class="row">
+    <div class="col-md-6">
+      <%= form_tag account_user_index_path, method: :post, class: 'form grey_bg' do %>
+
+        <div class="field large">
+          <label>Email</label>
+          <%= email_field_tag 'user[email]',@user.email, :required => true%>
+        </div>
+
+        <div class="field large">
+          <label>First name</label>
+          <%= text_field_tag 'user[first_name]',@user.first_name, :required => true%>
+        </div>
+
+        <div class="field large">
+          <label>Last name</label>
+          <%= text_field_tag 'user[last_name]',@user.last_name, :required => true%>
+        </div>
+
+        <div class="actions">
+          <%= submit_tag "Update", class:"btn btn-primary orange_button" %>
+        </div>
+      <% end %>
+    </div>
+      <div class="col-md-5 offset-md-1">
+        <%= form_tag account_user_index_path, method: :post, class: 'form grey_bg' do %>
+
+          <div class="field large">
+            <label>New password</label>
+            <%= password_field_tag 'user[password]',"", :required => true%>
+          </div>
+
+          <div class="field large">
+            <label>Retype new password</label>
+            <%= password_field_tag 'user[password_confirmation]',"", :required => true%>
+          </div>
+
+          <div class="actions">
+            <%= submit_tag "Update", class:"btn btn-primary orange_button" %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+  </section>
 <%else%>
   <div class="modal d_block " tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -14,7 +59,7 @@
       </div>
     </div>
   </div>
-  </div>
+  </section>
 <% end %>
 <script>
     $( ".close.to_home" ).click(function() {
