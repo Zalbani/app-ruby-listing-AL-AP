@@ -6,8 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # belongs_to :role
+  belongs_to :role
 
-  validates :roles_id,presence: true
+  validates :role_id,presence: true
 
 end
