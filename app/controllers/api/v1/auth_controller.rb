@@ -6,7 +6,6 @@ class Api::V1::AuthController < Api::ApiController
     token = nil
 
     if user
-
       if user.valid_password?(params[:password])
         token = user.generate_token
       end
