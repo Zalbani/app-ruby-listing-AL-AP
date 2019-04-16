@@ -11,6 +11,7 @@ describe User do
   end
 
 end
+
 describe "NOT logged in" do
   it "redirects me if I'm not logged" do
     get new_listing_url#create
