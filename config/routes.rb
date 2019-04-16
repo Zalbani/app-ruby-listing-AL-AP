@@ -20,11 +20,13 @@ Rails.application.routes.draw do
     end
 
     namespace :api, format: 'json' do
+      post 'auth', to: 'api#sign_in', as: 'sign_in'
       namespace :v1 do
-        post 'auth', to: 'auth#create'
+        namespace :account do
+          root 'profile#index'
+        end
       end
     end
-
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
