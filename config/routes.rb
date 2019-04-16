@@ -19,6 +19,12 @@ Rails.application.routes.draw do
       resources :'user', only: [:index, :create]
     end
 
+    namespace :api, format: 'json' do
+      namespace :v1 do
+        post 'auth', to: 'auth#create'
+      end
+    end
+
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
