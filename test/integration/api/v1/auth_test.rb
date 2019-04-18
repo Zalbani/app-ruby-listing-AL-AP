@@ -33,7 +33,6 @@ feature "Auth" do
     assert_equal 401 , last_response.status
   end
 
-  focus
   it "Return 401 if credential invalid" do
     post api_sign_in_path, {
         email: @user.email,

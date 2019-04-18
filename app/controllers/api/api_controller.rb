@@ -7,7 +7,7 @@ class Api::ApiController < ApplicationController
 
   def sign_in
     user = User.find_by(email: params[:email])
-    token = nil
+    token = nill
 
     if user
       if user.valid_password?(params[:password])
@@ -31,8 +31,8 @@ class Api::ApiController < ApplicationController
   private
 
   def auth_with_token
-
-    @user = User.find_by(auth_token: request.headers["X-Auth"])
+    raise user
+    @user = User.find_by(auth_token: request.headers["HTTP_AUTHORIZATION"])
 
     unless @user
       render json: {success: false}, status: 401
