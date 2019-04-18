@@ -2,6 +2,14 @@
 
 School project aiming at the creation of a classified ad site such as for example: https://www.leboncoin.fr/
 
+## Production site
+
+https://app-ruby-listing-al-ap.herokuapp.com
+
+### Administrator
+mail: admin@mail.com
+
+password: password
 ## Getting Started
 
 Start serveur
