@@ -4,12 +4,12 @@ School project aiming at the creation of a classified ad site such as for exampl
 
 ## Production site
 
+Deploy whith heroku
+
+
 https://app-ruby-listing-al-ap.herokuapp.com
 
-### Administrator
-mail: admin@mail.com
 
-password: password
 ## Getting Started
 
 Start serveur
@@ -31,6 +31,11 @@ rails db:migrate
 Data loading
 ```
 rails db:seed
+```
+
+Create database + data loading
+```
+rails db:setup
 ```
 
 Connection as Admin
@@ -56,13 +61,9 @@ Password : password
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Work with PostgreSQL database
 
-```
-Give examples
-```
-
-### Installing
+### Install & lunch
 
 
 ```
@@ -75,11 +76,7 @@ rails s
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Test lunching
-
-Explain what these tests test and why
+Run test
 
 ```
 spring rails test
@@ -89,4 +86,3 @@ spring rails test
 
 * **Alexis Lauradoux** - [AlexisLauradoux](https://github.com/AlexisLauradoux)
 * **Alban Pierson** - [Zalbani](https://github.com/Zalbani)
-
