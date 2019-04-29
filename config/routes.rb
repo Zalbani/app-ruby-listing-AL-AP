@@ -25,6 +25,9 @@ Rails.application.routes.draw do
         namespace :account do
           root 'profile#index'
         end
+        namespace :annonces do
+          root 'allannonces#index'
+        end
       end
     end
   end

@@ -1,7 +1,7 @@
 class Api::ApiController < ApplicationController
 
 
-  before_action :auth_with_token, except: :sign_in
+  #before_action :auth_with_token, except: :sign_in
 
 
 
@@ -31,7 +31,6 @@ class Api::ApiController < ApplicationController
   private
 
   def auth_with_token
-    raise user
     @user = User.find_by(auth_token: request.headers["HTTP_AUTHORIZATION"])
 
     unless @user
