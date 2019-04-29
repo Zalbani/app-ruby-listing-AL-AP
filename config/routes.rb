@@ -32,5 +32,8 @@ Rails.application.routes.draw do
     end
   end
 
+
+  post 'api/v1/annonces/allannonces/create'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

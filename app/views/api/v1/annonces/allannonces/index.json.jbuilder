@@ -1,4 +1,4 @@
-json.all_annonces(@my_annonce) do |annonce|
+json.(@annonces) do |annonce|
   json.id annonce.id
   json.title annonce.title
   json.auteur annonce.user.id
