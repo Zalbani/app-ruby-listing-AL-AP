@@ -32,7 +32,7 @@ Rails.application.routes.draw do
           root 'allcategory#index'
         end
         namespace :annonce do
-          post 'create', to: 'annonces/allannonces#create'
+          post 'create', to: './annonces/allannonces#create'
           resources :listings
         end
       end
