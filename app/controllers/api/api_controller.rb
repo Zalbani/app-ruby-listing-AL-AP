@@ -1,13 +1,14 @@
 class Api::ApiController < ApplicationController
 
 
-  #before_action :auth_with_token, except: :sign_in
+  before_action :auth_with_token, except: :sign_in
+  skip_before_action :verify_authenticity_token
 
 
 
   def sign_in
     user = User.find_by(email: params[:email])
-    token = nill
+    token = nil
 
     if user
       if user.valid_password?(params[:password])
