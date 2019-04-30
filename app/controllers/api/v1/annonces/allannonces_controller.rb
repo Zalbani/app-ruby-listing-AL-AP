@@ -1,6 +1,9 @@
 class Api::V1::Annonces::AllannoncesController < Api::ApiController
 
   skip_before_action :verify_authenticity_token
+  skip_before_action :auth_with_token, :only => [:index]
+
+
 
   def index
     @annonces = Annonce.all

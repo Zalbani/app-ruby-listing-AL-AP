@@ -7,6 +7,7 @@ class Api::ApiController < ApplicationController
 
 
 
+
   def sign_in
     user = User.find_by(email: params[:email])
     token = nil
