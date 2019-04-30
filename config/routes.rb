@@ -25,6 +25,12 @@ Rails.application.routes.draw do
         namespace :account do
           root 'profile#index'
         end
+        namespace :msgreceive do
+          root 'receive#index'
+        end
+        namespace :msgsent do
+          root 'sent#index'
+        end
         namespace :annonces do
           root 'allannonces#index'
         end
