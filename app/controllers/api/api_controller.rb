@@ -1,6 +1,6 @@
 class Api::ApiController < ApplicationController
 
-  #skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   #before_action :auth_with_token, except: :sign_in
 
 
