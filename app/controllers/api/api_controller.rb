@@ -33,10 +33,10 @@ class Api::ApiController < ApplicationController
   private
 
   def auth_with_token
-    @user = User.find_by(auth_token: request.headers["HTTP_AUTHORIZATION"])
+    @user = User.find_by(auth_token: request.headers["HTTP_TOKEN"])
 
     unless @user
-      render json: {success: false}, status: 401
+      render json: {success: false, error: "auth_with_token not passed"}, status: 401
     end
   end
 end

@@ -1,7 +1,7 @@
 class Api::V1::Annonces::AllannoncesController < Api::ApiController
 
   skip_before_action :verify_authenticity_token
-  
+
   def index
     @annonces = Annonce.all
   end
