@@ -5,9 +5,6 @@ class Api::ApiController < ApplicationController
   before_action :auth_with_token, except: :sign_in
 
 
-
-
-
   def sign_in
     user = User.find_by(email: params[:email])
     token = nil

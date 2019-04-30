@@ -27,19 +27,14 @@ Rails.application.routes.draw do
         end
         namespace :annonces do
           root 'allannonces#index'
+          post 'create', to: 'annonces/allannonces#create'
+          resources :listings
         end
         namespace :categories do
           root 'allcategory#index'
         end
-        post 'create', to: 'annonces/allannonces#create'
-        resources :listings
       end
     end
   end
-
-  post 'create', to: 'allannonces#create'
-
-  post 'api/v1/annonces/allannonces/create'
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end
