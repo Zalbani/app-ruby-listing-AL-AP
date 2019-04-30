@@ -1,6 +1,7 @@
 class Api::ApiController < ApplicationController
 
 
+  protect_from_forgery with: :exception
   before_action :auth_with_token, except: :sign_in
   skip_before_action :verify_authenticity_token
 
