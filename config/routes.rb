@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
     namespace :api, format: 'json' do
       post 'auth', to: 'api#sign_in', as: 'sign_in'
+      post 'create', to: 'v1/annonces/allannonces#create'
+      resources :listings
       namespace :v1 do
         namespace :account do
           root 'profile#index'
@@ -35,6 +37,7 @@ Rails.application.routes.draw do
     end
   end
 
+  post 'create', to: 'allannonces#create'
 
   post 'api/v1/annonces/allannonces/create'
 

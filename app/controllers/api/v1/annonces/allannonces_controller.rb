@@ -1,5 +1,7 @@
 class Api::V1::Annonces::AllannoncesController < Api::ApiController
 
+  skip_before_action :verify_authenticity_token
+
   def index
     @annonces = Annonce.all
   end
@@ -7,9 +9,9 @@ class Api::V1::Annonces::AllannoncesController < Api::ApiController
   def create
     @listing = Annonce.new(listings_params)
     if @listing.save
-      redirect_to controller: '/welcome' , created_annonce: 'true'
+      render json: @listing , status: 200
     else
-      raise @listing
+      render json: @listing.errors, status: :unprocessable_entity
     end
   end
 
@@ -17,10 +19,12 @@ class Api::V1::Annonces::AllannoncesController < Api::ApiController
 
   def listings_params
     params.permit(
+        :title,
         :content,
         :price,
-        :title
-        )
+        :category_id,
+        :user_id,
+        picture_attributes: [:file])
   end
 
 end
