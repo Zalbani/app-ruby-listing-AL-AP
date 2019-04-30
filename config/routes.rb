@@ -28,6 +28,9 @@ Rails.application.routes.draw do
         namespace :annonces do
           root 'allannonces#index'
         end
+        namespace :categories do
+          root 'allcategory#index'
+        end
       end
     end
   end
