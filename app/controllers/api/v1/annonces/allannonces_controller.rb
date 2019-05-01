@@ -26,8 +26,7 @@ class Api::V1::Annonces::AllannoncesController < Api::ApiController
         :content,
         :price,
         :category_id,
-        :user_id,
-        picture_attributes: [:file])
+        picture_attributes: [:file]).merge(user_id: @user.id)
   end
 
 end
