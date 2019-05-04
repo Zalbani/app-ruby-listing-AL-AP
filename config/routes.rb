@@ -40,6 +40,9 @@ Rails.application.routes.draw do
 
         post 'create-annonce', to: 'annonces/allannonces#create'
         resources :listings
+
+        post 'create-message', to: 'msgsent/sent#create'
+        resources :messages
       end
     end
   end
