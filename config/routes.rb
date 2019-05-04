@@ -43,6 +43,7 @@ Rails.application.routes.draw do
 
         post 'create-message', to: 'msgsent/sent#create'
         resources :messages
+
       end
     end
   end
